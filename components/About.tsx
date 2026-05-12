@@ -86,7 +86,7 @@ const AboutSection = () => {
 						About Us
 					</div>
 					<h2 className="text-[#05213A] text-4xl md:text-5xl font-bold tracking-tighter leading-tighter">
-						Medvisit is Nigeria's leading medical tourism and international
+						Medvisit is Nigeria&apos;s leading medical tourism and international
 						second opinion company.
 					</h2>
 					<div className="space-y-4 text-[#5E5F6E] leading-tight font-semibold text-xl pr-0 sm:pr-20">
@@ -95,8 +95,8 @@ const AboutSection = () => {
 							superior healthcare solutions worldwide.
 						</p>
 						<p>
-							Whether you're a patient seeking clarity on your diagnosis or a
-							doctor looking to enhance your practice, MedVisit is here to
+							Whether you&apos;re a patient seeking clarity on your diagnosis or
+							a doctor looking to enhance your practice, MedVisit is here to
 							support you every step of the way.
 						</p>
 					</div>
