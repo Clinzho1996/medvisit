@@ -1,4 +1,8 @@
 import GlobalSection from "@/components/global-mobility/Breadcrumb";
+import CbiFAQSection from "@/components/global-mobility/CbiFaq";
+import CbiInfoPage from "@/components/global-mobility/CbiInfo";
+import CbiOverview from "@/components/global-mobility/CbiOverview";
+import CbiWhy from "@/components/global-mobility/CbiWhy";
 
 function CBI() {
 	return (
@@ -14,6 +18,10 @@ function CBI() {
 					isCentered={true}
 				/>
 			</div>
+			<CbiOverview />
+			<CbiInfoPage />
+			<CbiWhy />
+			<CbiFAQSection />
 		</div>
 	);
 }

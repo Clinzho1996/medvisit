@@ -1,4 +1,9 @@
+import BcFAQSection from "@/components/global-mobility/BcFaq";
+import BcWhy from "@/components/global-mobility/BcWhy";
 import GlobalSection from "@/components/global-mobility/Breadcrumb";
+import InfoPage from "@/components/global-mobility/Info";
+import OverviewAndProblemSection from "@/components/global-mobility/Overview";
+import Problem from "@/components/global-mobility/Problem";
 
 function BirthCitizenship() {
 	return (
@@ -14,6 +19,12 @@ function BirthCitizenship() {
 					isCentered={true}
 				/>
 			</div>
+
+			<OverviewAndProblemSection />
+			<Problem />
+			<InfoPage />
+			<BcWhy />
+			<BcFAQSection />
 		</div>
 	);
 }

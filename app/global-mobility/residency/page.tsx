@@ -1,4 +1,8 @@
 import GlobalSection from "@/components/global-mobility/Breadcrumb";
+import ResFAQSection from "@/components/global-mobility/ResFaq";
+import ResInfoPage from "@/components/global-mobility/ResInfo";
+import CitizenshipPath from "@/components/global-mobility/ResPath";
+import ResWhy from "@/components/global-mobility/ResWhy";
 
 function Residency() {
 	return (
@@ -15,6 +19,10 @@ Get permanent residency in 2 years and Chilean citizenship in 5 years."
 					isCentered={true}
 				/>
 			</div>
+			<ResInfoPage />
+			<ResWhy />
+			<CitizenshipPath />
+			<ResFAQSection />
 		</div>
 	);
 }

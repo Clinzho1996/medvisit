@@ -1,4 +1,8 @@
 import GlobalSection from "@/components/global-mobility/Breadcrumb";
+import GloFAQSection from "@/components/global-mobility/GloFaq";
+import GloInfoPage from "@/components/global-mobility/GloInfo";
+import GloOverview from "@/components/global-mobility/GloOverview";
+import GloWhy from "@/components/global-mobility/GloWhy";
 
 function GoldenVisas() {
 	return (
@@ -14,6 +18,10 @@ function GoldenVisas() {
 					isCentered={true}
 				/>
 			</div>
+			<GloOverview />
+			<GloInfoPage />
+			<GloWhy />
+			<GloFAQSection />
 		</div>
 	);
 }
