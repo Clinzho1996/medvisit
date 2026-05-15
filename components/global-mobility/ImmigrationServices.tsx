@@ -2,12 +2,14 @@
 
 import { IconCaretRightFilled, IconCheck } from "@tabler/icons-react";
 import { motion, Variants } from "framer-motion";
+import Link from "next/link";
 
 const ImmigrationServices = () => {
 	const services = [
 		{
 			title: "Chilean Birth Citizenship",
 			price: "From $22,000 Total Family Cost",
+			link: "/global-mobility/birth-citizenship",
 			priceColor: "bg-blue-600",
 			bgColor: "birth-bg",
 			description:
@@ -21,6 +23,7 @@ const ImmigrationServices = () => {
 		{
 			title: "Chilean Residency",
 			price: "From $2,750 + Fees",
+			link: "/global-mobility/residency",
 			priceColor: "bg-slate-700",
 			bgColor: "reside-bg",
 			description:
@@ -34,6 +37,7 @@ const ImmigrationServices = () => {
 		{
 			title: "Citizenship by Investment (CBI)",
 			price: "From $90,000 Investment",
+			link: "/global-mobility/citizenship-by-investment",
 			priceColor: "bg-orange-600",
 			bgColor: "cbi-bg",
 			description:
@@ -47,6 +51,7 @@ const ImmigrationServices = () => {
 		{
 			title: "Golden Visas & Residency Programs",
 			price: "From $250,000 Investment",
+			link: "/global-mobility/compare-plans",
 			priceColor: "bg-emerald-600",
 			bgColor: "visa-bg",
 			description:
@@ -143,14 +148,18 @@ const ImmigrationServices = () => {
 							goals.
 						</motion.p>
 					</div>
-					<motion.button
-						variants={buttonVariants}
-						whileHover="hover"
-						whileTap="tap"
-						className="flex items-center gap-2 px-5 py-2.5 bg-[#F4911E] text-white text-xs font-bold rounded-lg shadow-lg shadow-orange-200 transition-transform active:scale-95">
-						Compare All Programs
-						<IconCaretRightFilled size={14} stroke={3} />
-					</motion.button>
+					<Link
+						href="/global-mobility/compare-plans"
+						className="hidden md:block">
+						<motion.button
+							variants={buttonVariants}
+							whileHover="hover"
+							whileTap="tap"
+							className="flex cursor-pointer items-center gap-2 px-5 py-2.5 bg-[#F4911E] text-white text-xs font-bold rounded-lg shadow-lg shadow-orange-200 transition-transform active:scale-95">
+							Compare All Programs
+							<IconCaretRightFilled size={14} stroke={3} />
+						</motion.button>
+					</Link>
 				</motion.div>
 
 				{/* Card Grid */}
@@ -221,13 +230,15 @@ const ImmigrationServices = () => {
 									))}
 								</div>
 
-								<motion.button
-									variants={buttonVariants}
-									whileHover="hover"
-									whileTap="tap"
-									className="px-6 py-2 border border-gray-400 rounded-full text-xs font-bold text-gray-800 hover:bg-white/50 transition-colors">
-									Learn More
-								</motion.button>
+								<Link href={service.link}>
+									<motion.button
+										variants={buttonVariants}
+										whileHover="hover"
+										whileTap="tap"
+										className="px-6 cursor-pointer py-2 border border-gray-400 rounded-full text-xs font-bold text-gray-800 hover:bg-white/50 transition-colors">
+										Learn More
+									</motion.button>
+								</Link>
 							</div>
 						</motion.div>
 					))}
