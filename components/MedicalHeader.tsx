@@ -16,15 +16,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-const Navbar = () => {
+const MedicalNavbar = () => {
 	const [isSearchOpen, setIsSearchOpen] = useState(false);
 	const [searchQuery, setSearchQuery] = useState("");
 
 	const navLinks = [
-		{ name: "Medical Tourism", href: "/medical-tourism" },
-		{ name: "Second Medical Opinion", href: "/second-opinion" },
-		{ name: "Global Mobility", href: "/global-mobility" },
-		{ name: "Contact Us", href: "/contact-us" },
+		{ name: "Home", href: "/medical-tourism" },
+		{ name: "About us", href: "/about-us" },
+		{ name: "Services", href: "/services" },
+		{ name: "Process", href: "/process" },
+		{ name: "Blog", href: "/blog" },
+		{ name: "Contact us", href: "/contact-us" },
 	];
 
 	const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
@@ -47,7 +49,7 @@ const Navbar = () => {
 						<div className="flex items-center gap-2">
 							<IconMapPin size={14} className="text-[#F4911E]" />
 							<span className="font-semibold">
-								1 Fawole Lane, Off Ikoroduspand, Obanikoro, Lagos.
+								1 Fawole Lane, Off Ikorodu Road, Obanikoro, Lagos.
 							</span>
 						</div>
 					</div>
@@ -77,15 +79,17 @@ const Navbar = () => {
 			<nav className="bg-white w-full">
 				<div className=" flex items-center justify-between h-15 ml-[8%]">
 					{/* Logo */}
-					<div className="flex items-center gap-2 shrink-0">
-						<Image
-							src="/logo.png"
-							alt="MedVisit Logo"
-							width={150}
-							height={50}
-							className="w-full h-10"
-						/>
-					</div>
+					<Link href="/">
+						<div className="flex items-center gap-2 shrink-0">
+							<Image
+								src="/logo.png"
+								alt="MedVisit Logo"
+								width={150}
+								height={50}
+								className="w-full h-10"
+							/>
+						</div>
+					</Link>
 
 					{/* Desktop Links */}
 					<div className="hidden lg:flex items-center gap-8">
@@ -206,4 +210,4 @@ const Navbar = () => {
 	);
 };
 
-export default Navbar;
+export default MedicalNavbar;

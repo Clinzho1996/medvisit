@@ -16,15 +16,19 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-const Navbar = () => {
+const MobilityNavbar = () => {
 	const [isSearchOpen, setIsSearchOpen] = useState(false);
 	const [searchQuery, setSearchQuery] = useState("");
 
 	const navLinks = [
-		{ name: "Medical Tourism", href: "/medical-tourism" },
-		{ name: "Second Medical Opinion", href: "/second-opinion" },
-		{ name: "Global Mobility", href: "/global-mobility" },
-		{ name: "Contact Us", href: "/contact-us" },
+		{ name: "Home", href: "/" },
+		{ name: "Birth Citizenship", href: "/birth-citizenship" },
+		{ name: "Residency", href: "/residency" },
+		{
+			name: "Citizenship by Investment (CBI)",
+			href: "/citizenship-by-investment",
+		},
+		{ name: "Golden Visas", href: "/golden-visas" },
 	];
 
 	const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
@@ -38,7 +42,7 @@ const Navbar = () => {
 		<header className="w-full font-sans border-b border-gray-100 shadow-2xl shadow-[#05213A]/10  sticky top-0 z-50 bg-white">
 			{/* --- TOP BAR --- */}
 			<div className="bg-[#FAFAFA] border-b border-gray-200 py-2 hidden lg:block">
-				<div className="flex justify-between items-center text-[11px] text-gray-600 px-[9%]">
+				<div className=" flex justify-between items-center text-[11px] text-gray-600 px-[9%]">
 					<div className="flex items-center gap-6">
 						<div className="flex items-center gap-2">
 							<IconMailOpened size={14} className="text-[#F4911E]" />
@@ -47,7 +51,7 @@ const Navbar = () => {
 						<div className="flex items-center gap-2">
 							<IconMapPin size={14} className="text-[#F4911E]" />
 							<span className="font-semibold">
-								1 Fawole Lane, Off Ikoroduspand, Obanikoro, Lagos.
+								1A, Johnson Oguntuyo street, Atunrase estate, Gbagada Lagos.
 							</span>
 						</div>
 					</div>
@@ -77,15 +81,17 @@ const Navbar = () => {
 			<nav className="bg-white w-full">
 				<div className=" flex items-center justify-between h-15 ml-[8%]">
 					{/* Logo */}
-					<div className="flex items-center gap-2 shrink-0">
-						<Image
-							src="/logo.png"
-							alt="MedVisit Logo"
-							width={150}
-							height={50}
-							className="w-full h-10"
-						/>
-					</div>
+					<Link href="/">
+						<div className="flex items-center gap-2 shrink-0">
+							<Image
+								src="/logo.png"
+								alt="MedVisit Logo"
+								width={150}
+								height={50}
+								className="w-full h-10"
+							/>
+						</div>
+					</Link>
 
 					{/* Desktop Links */}
 					<div className="hidden lg:flex items-center gap-8">
@@ -121,7 +127,7 @@ const Navbar = () => {
 									Speak With A Consultant
 								</span>
 								<span className="text-lg font-bold leading-none">
-									+23481 825 22015
+									+234 805 807 1257
 								</span>
 							</div>
 						</div>
@@ -158,7 +164,7 @@ const Navbar = () => {
 												<p className="text-[10px] uppercase font-bold">
 													Consultant
 												</p>
-												<p className="font-bold">+23481 825 22015</p>
+												<p className="font-bold">+234 805 807 1257</p>
 											</div>
 										</div>
 									</div>
@@ -206,4 +212,4 @@ const Navbar = () => {
 	);
 };
 
-export default Navbar;
+export default MobilityNavbar;

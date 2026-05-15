@@ -1,7 +1,6 @@
+import MedicalNavbar from "@/components/MedicalHeader";
 import { cn } from "@/lib/utils";
-import type { Metadata } from "next";
 import { Geist, Nunito_Sans } from "next/font/google";
-import "./globals.css";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -10,12 +9,7 @@ const nunitoSans = Nunito_Sans({
 	subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-	title: "Medvisit Nigeria",
-	description: "Top Medical Tourism Company in Nigeria | Medvisit Nigeria",
-};
-
-export default function RootLayout({
+export default function MedicalLayout({
 	children,
 }: Readonly<{
 	children: React.ReactNode;
@@ -30,7 +24,10 @@ export default function RootLayout({
 				"font-sans",
 				geist.variable,
 			)}>
-			<body className="min-h-full flex flex-col">{children}</body>
+			<body className="min-h-full flex flex-col">
+				<MedicalNavbar />
+				{children}
+			</body>
 		</html>
 	);
 }

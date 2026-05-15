@@ -1,11 +1,15 @@
 import AboutSection from "@/components/About";
 import HeroSection from "@/components/Hero";
+import MedVisitFooter from "@/components/MainFooter";
+import Navbar from "@/components/MainHeader";
 import ServicesSection from "@/components/Services";
 import Image from "next/image";
+import "./globals.css";
 
 function HomePage() {
 	return (
 		<div>
+			<Navbar />
 			<HeroSection />
 			<AboutSection />
 			<div className="border-t border-[#E8E8E8]">
@@ -18,6 +22,7 @@ function HomePage() {
 				/>
 			</div>
 			<ServicesSection />
+			<MedVisitFooter />
 		</div>
 	);
 }
