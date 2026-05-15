@@ -13,6 +13,7 @@ function CBI() {
 					title="Acquire a Second Passport Through Qualified Investment — From $90,000"
 					subtitle="Unlock visa-free travel to 125-160+ countries, protect your wealth, and secure your family's future with a second citizenship."
 					buttonText="Compare Programs"
+					link="/global-mobility/compare-plans"
 					bgColor="bg-[#F6DDCF]"
 					img="/slash.png"
 					isCentered={true}

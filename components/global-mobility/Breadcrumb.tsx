@@ -10,7 +10,7 @@ interface CustomSectionProps {
 	badgeText?: string;
 	title: string;
 	subtitle: string;
-	buttonText: string;
+	buttonText?: string;
 	bgColor?: string;
 	titleColor?: string;
 	isCentered?: boolean;
@@ -72,22 +72,24 @@ const GlobalSection: React.FC<CustomSectionProps> = ({
 						whileInView={{ opacity: 1 }}
 						viewport={{ once: true }}
 						transition={{ delay: 0.2 }}
-						className="text-gray-600 tracking-tighter text-sm md:text-[15px] leading-relaxed mb-10 max-w-2xl mx-auto">
+						className="text-gray-600 tracking-tighter text-sm md:text-[15px] leading-relaxed mb-10 max-w-3xl mx-auto">
 						{subtitle}
 					</motion.p>
 
 					{/* Button */}
-					<Link
-						href={link || "#"}
-						className="w-full  mx-auto flex flex-row justify-center items-center">
-						<motion.button
-							whileHover={{ scale: 1.03 }}
-							whileTap={{ scale: 0.98 }}
-							className="flex flex-row cursor-pointer items-center gap-2 px-8 py-3.5 justify-center bg-gradient-to-r from-[#F2B05E] to-[#EA9444] text-white text-[13px] font-bold rounded-xl shadow-lg shadow-orange-300/40 transition-all">
-							{buttonText}
-							<IconCaretRightFilled size={18} stroke={3} />
-						</motion.button>
-					</Link>
+					{buttonText && (
+						<Link
+							href={link || "#"}
+							className="w-full  mx-auto flex flex-row justify-center items-center">
+							<motion.button
+								whileHover={{ scale: 1.03 }}
+								whileTap={{ scale: 0.98 }}
+								className="flex flex-row cursor-pointer items-center gap-2 px-8 py-3.5 justify-center bg-gradient-to-r from-[#F2B05E] to-[#EA9444] text-white text-[13px] font-bold rounded-xl shadow-lg shadow-orange-300/40 transition-all">
+								{buttonText}
+								<IconCaretRightFilled size={18} stroke={3} />
+							</motion.button>
+						</Link>
+					)}
 				</div>
 			</div>
 		</section>
