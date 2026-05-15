@@ -42,7 +42,7 @@ const PassportPowerTable = () => {
 			{/* Stats Hero Card */}
 			<div className="bg-white border border-b-0 border-[#05213A14] p-4 rounded-t-lg">
 				<div className="bg-[#F5F5F5] rounded-2xl b  flex flex-col md:flex-row items-center justify-around mb-2  relative overflow-hidden">
-					<div className="text-center z-10">
+					<div className="text-center z-10 p-4 sm:p-0">
 						<span className="text-5xl font-bold text-[#F7931E]">#14</span>
 						<p className="font-bold text-[#0F2331] mt-2">Global Ranking</p>
 						<p className="text-xs text-gray-400 mt-1">
@@ -50,7 +50,7 @@ const PassportPowerTable = () => {
 						</p>
 					</div>
 					<div className="h-16 w-[1px] bg-gray-200 hidden md:block" />
-					<div className="text-center z-10 mt-8 md:mt-0">
+					<div className="text-center p-4 sm:p-0 z-10 mt-8 md:mt-0">
 						<span className="text-5xl font-bold text-[#F7931E]">175+</span>
 						<p className="font-bold text-[#0F2331] mt-2">Visa-Free Countries</p>
 						<p className="text-xs text-gray-400 mt-1">
