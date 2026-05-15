@@ -178,7 +178,7 @@ const ImmigrationServices = () => {
 							</motion.div>
 
 							{/* Content */}
-							<div className="mt-5 max-w-full sm:max-w-[65%] relative z-10  sm:mt-20">
+							<div className="mt-12 max-w-full sm:max-w-[65%] relative z-10  sm:mt-20">
 								<motion.h3
 									variants={headerVariants}
 									className="text-2xl font-bold text-[#0F2331] mb-4 leading-tight">

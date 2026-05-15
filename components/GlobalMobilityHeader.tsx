@@ -21,14 +21,14 @@ const MobilityNavbar = () => {
 	const [searchQuery, setSearchQuery] = useState("");
 
 	const navLinks = [
-		{ name: "Home", href: "/" },
-		{ name: "Birth Citizenship", href: "/birth-citizenship" },
-		{ name: "Residency", href: "/residency" },
+		{ name: "Home", href: "/global-mobility" },
+		{ name: "Birth Citizenship", href: "/global-mobility/birth-citizenship" },
+		{ name: "Residency", href: "/global-mobility/residency" },
 		{
 			name: "Citizenship by Investment (CBI)",
-			href: "/citizenship-by-investment",
+			href: "/global-mobility/citizenship-by-investment",
 		},
-		{ name: "Golden Visas", href: "/golden-visas" },
+		{ name: "Golden Visas", href: "/global-mobility/golden-visas" },
 	];
 
 	const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {

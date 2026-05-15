@@ -42,7 +42,7 @@ const WhyChooseMedvisit = () => {
 					whileInView={{ opacity: 1, x: 0 }}
 					viewport={{ once: true }}
 					transition={{ duration: 0.6 }}>
-					<h2 className="text-4xl font-bold text-white mb-6">
+					<h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
 						Why Choose Medvisit
 					</h2>
 					<p className="text-[#F9F9F9] tracking-tighter text-sm md:text-base leading-relaxed mb-12 max-w-md">
