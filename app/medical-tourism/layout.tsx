@@ -1,3 +1,4 @@
+import MedicalVisitFooter from "@/components/MedicalFooter";
 import MedicalNavbar from "@/components/MedicalHeader";
 import { cn } from "@/lib/utils";
 import { Geist, Nunito_Sans } from "next/font/google";
@@ -27,6 +28,7 @@ export default function MedicalLayout({
 			<body className="min-h-full flex flex-col">
 				<MedicalNavbar />
 				{children}
+				<MedicalVisitFooter />
 			</body>
 		</html>
 	);
