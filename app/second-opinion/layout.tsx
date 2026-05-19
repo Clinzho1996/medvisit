@@ -1,3 +1,4 @@
+import ExpertFooter from "@/components/ExpertFooter";
 import ExpertNavbar from "@/components/ExpertHeader";
 import { cn } from "@/lib/utils";
 import { Geist, Nunito_Sans } from "next/font/google";
@@ -27,6 +28,7 @@ export default function MedicalLayout({
 			<body className="min-h-full flex flex-col">
 				<ExpertNavbar />
 				{children}
+				<ExpertFooter />
 			</body>
 		</html>
 	);

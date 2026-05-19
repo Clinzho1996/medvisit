@@ -1,5 +1,6 @@
 import BlogGridSection from "@/components/medical-tourism/Blog";
 import Breadcrumb from "@/components/medical-tourism/Breadcrumb";
+import Prefooter from "@/components/medical-tourism/Prefooter";
 
 function Blog() {
 	return (
@@ -11,6 +12,7 @@ centers in the world"
 			/>
 
 			<BlogGridSection />
+			<Prefooter />
 		</div>
 	);
 }

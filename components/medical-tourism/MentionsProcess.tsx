@@ -66,7 +66,7 @@ function MentionsProcess() {
 			ref={ref}
 			initial="hidden"
 			animate={inView ? "visible" : "hidden"}
-			className="flex flex-col justify-center border-t items-center pb-12 sm:py-[6%] px-4 sm:px-6 w-full">
+			className="flex flex-col justify-center border-t items-center pb-12 pt-12 sm:py-[6%] px-4 sm:px-6 w-full">
 			<motion.h2
 				variants={headingVariants}
 				className="text-xs sm:text-lg uppercase tracking-tight  font-extrabold text-center text-[#05213A] mb-4 ">

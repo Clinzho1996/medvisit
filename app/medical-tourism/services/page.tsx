@@ -1,5 +1,6 @@
 import Breadcrumb from "@/components/medical-tourism/Breadcrumb";
 import Mentions from "@/components/medical-tourism/Mentions";
+import Prefooter from "@/components/medical-tourism/Prefooter";
 import MedicalProceduresSection from "@/components/medical-tourism/Procedures";
 
 function Services() {
@@ -12,6 +13,7 @@ our hospitals provide"
 			/>
 			<MedicalProceduresSection />
 			<Mentions />
+			<Prefooter />
 		</div>
 	);
 }

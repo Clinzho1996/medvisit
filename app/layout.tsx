@@ -1,9 +1,7 @@
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import { Geist, Nunito_Sans } from "next/font/google";
+import { Nunito_Sans } from "next/font/google";
 import "./globals.css";
-
-const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
 const nunitoSans = Nunito_Sans({
 	variable: "--font-nunito-sans",
@@ -23,14 +21,8 @@ export default function RootLayout({
 	return (
 		<html
 			lang="en"
-			className={cn(
-				"h-full",
-				"antialiased",
-				nunitoSans.variable,
-				"font-sans",
-				geist.variable,
-			)}>
-			<body className="min-h-full flex flex-col">{children}</body>
+			className={cn("h-full", "antialiased", nunitoSans.variable)}>
+			<body className={cn("min-h-full flex flex-col")}>{children}</body>
 		</html>
 	);
 }

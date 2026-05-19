@@ -8,7 +8,7 @@ function Breadcrumb({ subtitle, title }: { subtitle: string; title: string }) {
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			transition={{ duration: 0.6 }}
-			className="bread-bg w-full h-90 mx-auto p-16 sm:p-20 justify-center items-center space-y-2">
+			className="bread-bg w-full h-50 sm:h-90 mx-auto p-16 sm:p-20 justify-center items-center space-y-2">
 			<div className="max-w-3xl mx-auto justify-center items-center">
 				<motion.p
 					initial={{ y: 20, opacity: 0 }}

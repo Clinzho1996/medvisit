@@ -180,7 +180,7 @@ export default function ContactHelpSection() {
 
 							{/* Headset Symbol Vector */}
 							<div className="text-white ">
-								<Image src="/head.png" alt="headset" width={130} height={130} />
+								<Image src="/head.png" alt="headset" width={130} height={130} className="w-20 h-20 sm:w-30 sm:h-30 object-contain" />
 							</div>
 						</div>
 					</div>

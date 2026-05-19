@@ -121,12 +121,12 @@ export default function MedicalProcessImages() {
 								<div className="space-y-2 w-full">
 									{/* Step Action Header */}
 									<h3
-										className={`text-[13px] sm:text-lg font-extrabold tracking-tighter uppercase ${step.textColor}`}>
+										className={`text-[16px] sm:text-lg font-extrabold tracking-tighter uppercase ${step.textColor}`}>
 										{step.title}
 									</h3>
 
 									{/* Step Explanatory String Block */}
-									<p className="text-[#000000B2] font-normal text-[10.5px] sm:text-sm leading-relaxed max-w-[240px] mx-auto">
+									<p className="text-[#000000B2] font-normal text-sm leading-relaxed max-w-[240px] mx-auto">
 										{step.description}
 									</p>
 								</div>

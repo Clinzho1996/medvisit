@@ -34,7 +34,6 @@ export default function AboutInner() {
 						viewport={{ once: true, margin: "-100px" }}
 						variants={imageAnimation}
 						className="lg:col-span-6 relative flex justify-center lg:justify-start">
-						{/* Replace src with your composite image for Row 1 */}
 						<img
 							src="/ab.png"
 							alt="World Class Hospitals Showcase"
