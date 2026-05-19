@@ -1,4 +1,5 @@
 import Breadcrumb from "@/components/medical-tourism/Breadcrumb";
+import ExploreHospitalsSection from "@/components/medical-tourism/Hospitals";
 
 function Hospitals() {
 	return (
@@ -8,6 +9,7 @@ function Hospitals() {
 				title="The best treatment
 centers in the world"
 			/>
+			<ExploreHospitalsSection />
 		</div>
 	);
 }

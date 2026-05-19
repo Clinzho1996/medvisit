@@ -1,4 +1,6 @@
 import Breadcrumb from "@/components/medical-tourism/Breadcrumb";
+import MentionsProcess from "@/components/medical-tourism/MentionsProcess";
+import MedicalProcessSteps from "@/components/medical-tourism/Steps";
 
 function Process() {
 	return (
@@ -8,6 +10,8 @@ function Process() {
 				title="The process of getting
 treatment abroad"
 			/>
+			<MedicalProcessSteps />
+			<MentionsProcess />
 		</div>
 	);
 }
