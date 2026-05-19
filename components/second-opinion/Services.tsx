@@ -37,7 +37,7 @@ const servicesData: ServiceCard[] = [
 
 export default function OurServices() {
 	return (
-		<section className="mx-auto max-w-7xl px-6 py-16 md:px-8 lg:py-24">
+		<section className="mx-auto max-w-7xl px-6 py-16 md:px-8 lg:pb-24">
 			{/* Section Header */}
 			<div className="text-center">
 				<h2 className="text-3xl font-extrabold tracking-tight text-[#0A2540] md:text-4xl">
@@ -50,7 +50,7 @@ export default function OurServices() {
 				{servicesData.map((service) => (
 					<div
 						key={service.id}
-						className="group relative flex flex-col justify-between bg-white px-8 py-12 transition-all duration-300 hover:-translate-y-1 rounded-sm border border-gray-100 shadow-[0_10px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)]">
+						className="group relative flex flex-col justify-between bg-white px-12 py-12 transition-all duration-300 hover:-translate-y-1 rounded-sm border border-gray-100 shadow-[0_10px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)]">
 						<div>
 							{/* Tabler Icon Container wrapper */}
 							<div className="text-[#F39223] transition-transform duration-300 group-hover:scale-105">
@@ -69,7 +69,7 @@ export default function OurServices() {
 						</div>
 
 						{/* Orange Underline Accent Strip */}
-						<div className="absolute bottom-0 left-0 h-1 w-full bg-[#F39223] transform scale-x-100 transition-transform duration-300" />
+						<div className="absolute bottom-0 left-0 h-1 w-full bg-[#F39223] transform scale-x-100 transition-transform duration-300 mb-3" />
 					</div>
 				))}
 			</div>
@@ -82,7 +82,7 @@ export default function OurServices() {
 
 				<Link
 					href="#book-consultation"
-					className="inline-block rounded-[4px] border border-[#F39223] bg-white px-6 py-2.5 text-xs font-bold text-[#F39223] transition-all duration-200 hover:bg-[#F39223] hover:text-white active:scale-[0.98]">
+					className="inline-block rounded-[4px] border border-[#F39223] bg-white px-6 py-2.5 text-xs sm:text-base font-extrabold text-[#F39223] transition-all duration-200 hover:bg-[#F39223] hover:text-white active:scale-[0.98]">
 					Book Second Opinion Now.
 				</Link>
 			</div>
