@@ -1,3 +1,4 @@
+import AboutInner from "@/components/medical-tourism/AboutInner";
 import Breadcrumb from "@/components/medical-tourism/Breadcrumb";
 
 function AboutUs() {
@@ -8,6 +9,7 @@ function AboutUs() {
 				title="Everything you need
 to know about us"
 			/>
+			<AboutInner />
 		</div>
 	);
 }
