@@ -31,7 +31,7 @@ export default function MedicalTourismHero() {
 				{/* --- LEFT SIDE: CONTENT --- */}
 				<div className="relative flex flex-col justify-start px-8 sm:px-12 md:pl-[16%] py-16 lg:py-24 z-10 max-w-3xl mx-auto lg:mx-0">
 					{/* Top-left subtle dotted swirl pattern */}
-					<div className="absolute bottom-4 left-4 w-48 h-28  pointer-events-none hidden md:block">
+					<div className="absolute bottom-0 left-4 w-48 h-28  pointer-events-none hidden md:block">
 						<Image
 							src="/circ2.png"
 							alt="Background"
