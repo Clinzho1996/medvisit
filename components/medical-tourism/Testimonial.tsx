@@ -13,23 +13,18 @@ interface Testimonial {
 const testimonialsData: Testimonial[] = [
 	{
 		id: 1,
-		text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel adipiscing vitae dolor eu odio nibh eget. Velit eros ullamcorper in dui sit. Tristique arcu ipsum.",
-		author: "Mr. Kolawole Johnson",
+		text: "Thank God for Medvisit. They were instrumental in my uncle's successful operation in India.	",
+		author: "W. Popoola",
 	},
 	{
 		id: 2,
-		text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel adipiscing vitae dolor eu odio nibh eget. Velit eros ullamcorper in dui sit. Tristique arcu ipsum.",
-		author: "Mrs. Abimbola Ogunlesi",
+		text: "There are few medical tourism agencies in Nigeria but Medvisit has stood out from the rest. They have shown exceptionality in their work etiquettes.",
+		author: "Precious Naador",
 	},
 	{
 		id: 3,
-		text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel adipiscing vitae dolor eu odio nibh eget. Velit eros ullamcorper in dui sit. Tristique arcu ipsum.",
-		author: "Dr. Michael Adebayo",
-	},
-	{
-		id: 4,
-		text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel adipiscing vitae dolor eu odio nibh eget. Velit eros ullamcorper in dui sit. Tristique arcu ipsum.",
-		author: "Chief Mrs. Funmilayo Ransome-Kuti",
+		text: "One of the best medical tourism companies out there. I was really impressed by how seamless their services were.",
+		author: "Olumide Bakare",
 	},
 ];
 
@@ -86,17 +81,17 @@ export default function TestimonialCarousel() {
 	const visibleItems = getVisibleItems();
 
 	return (
-		<section className="w-full bg-[#FAFBFC] py-24 px-4 font-sans overflow-hidden">
-			<div className="max-w-6xl mx-auto relative">
+		<section className="w-full bg-[#FAFCFE] py-24 px-[6%] font-sans overflow-hidden">
+			<div className="mx-auto relative">
 				{/* --- HEADER BLOCK --- */}
 				<div className="text-left space-y-2 mb-16 px-4 md:px-12">
 					<span className="text-[#F7931E] text-xs font-bold uppercase tracking-widest block">
 						Testimonial
 					</span>
-					<h2 className="text-3xl md:text-4xl font-extrabold text-[#05213A] tracking-tight">
+					<h2 className="text-3xl md:text-5xl font-extrabold text-[#05213A] tracking-tighter">
 						Medvisit Medical Services
 					</h2>
-					<p className="text-gray-400 text-xs md:text-sm font-light">
+					<p className="text-[#000000B2] text-xs md:text-lg font-normal">
 						We're known for providing high-quality health care and more!
 					</p>
 				</div>
@@ -117,7 +112,7 @@ export default function TestimonialCarousel() {
 					</motion.button>
 
 					{/* Carousel Window - 3 column grid */}
-					<div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center justify-center w-full max-w-5xl">
+					<div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center justify-center w-full max-w-7xl">
 						{visibleItems.map((testimonial, idx) => {
 							const isActive = idx === 1; // Center card is active
 
@@ -158,7 +153,7 @@ export default function TestimonialCarousel() {
 									}}>
 									{/* Testimonial Core Content */}
 									<div className="space-y-4 flex-1">
-										<p className="text-gray-600 font-light text-sm leading-relaxed line-clamp-5">
+										<p className="text-[#262B35] font-normal text-lg leading-relaxed line-clamp-5">
 											{testimonial.text}
 										</p>
 									</div>

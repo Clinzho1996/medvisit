@@ -21,7 +21,7 @@ export default function AboutAndQuoteSection() {
 	return (
 		<section className="relative w-full bg-white font-sans min-h-[700px]">
 			{/* --- UPPER DEEP NAVY BANNER BACKGROUND --- */}
-			<div className="absolute top-0 left-0 right-0 h-[130px] bg-[#05213A] z-0 overflow-hidden">
+			<div className="absolute top-0 left-0 right-0 h-[30px] sm:h-[140px] bg-[#05213A] z-0 overflow-hidden">
 				{/* Abstract vector wave line graphic indicators on left */}
 				<div className="absolute top-0 left-6  text-white w-164 h-32 hidden md:block select-none">
 					<Image src="/12.png" alt="wave" fill />

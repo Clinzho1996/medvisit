@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 interface FlagBadgeProps {
 	country: string;
 	flagUrl: string;
-	top: string; // Percentage position (e.g., '45%')
-	left: string; // Percentage position (e.g., '22%')
-	delay: number; // Staggered start time for the heartbeat animation
+	top: string;
+	left: string;
+	delay: number;
 }
 
 // Sub-component for individual animated map pins
@@ -33,7 +33,7 @@ const FlagPin = ({ country, flagUrl, top, left, delay }: FlagBadgeProps) => {
 					delay: delay * 0.3, // Offsets the animations so they pulse separately
 				}}
 				whileHover={{ scale: 1.25, zIndex: 20 }}
-				className="w-6 h-6 sm:w-8 sm:h-8 md:w-9 md:h-9 bg-white p-0.5 sm:p-1 rounded-md shadow-md border border-gray-100 flex items-center justify-center transition-shadow hover:shadow-lg">
+				className="w-6 h-6 sm:w-8 sm:h-8 md:w-12 md:h-10 bg-white p-0.5 sm:p-1 rounded-md shadow-md border border-gray-100 flex items-center justify-center transition-shadow hover:shadow-lg">
 				<img
 					src={flagUrl}
 					alt={`${country} Flag`}
@@ -50,92 +50,92 @@ export default function WorldCoverageSection() {
 		{
 			country: "United States",
 			flagUrl: "https://flagcdn.com/us.svg",
-			top: "61%",
-			left: "22%",
+			top: "51%",
+			left: "24%",
 			delay: 1,
 		},
 		{
 			country: "Spain",
 			flagUrl: "https://flagcdn.com/es.svg",
-			top: "60%",
+			top: "43%",
 			left: "46%",
 			delay: 4,
 		},
 		{
 			country: "United Kingdom",
 			flagUrl: "https://flagcdn.com/gb.svg",
-			top: "48%",
+			top: "28%",
 			left: "51%",
 			delay: 2,
 		},
 		{
 			country: "Egypt",
 			flagUrl: "https://flagcdn.com/eg.svg",
-			top: "67%",
+			top: "49%",
 			left: "52%",
 			delay: 6,
 		},
 		{
 			country: "Germany",
 			flagUrl: "https://flagcdn.com/de.svg",
-			top: "56%",
+			top: "36%",
 			left: "55%",
 			delay: 3,
 		},
 		{
 			country: "Israel",
 			flagUrl: "https://flagcdn.com/il.svg",
-			top: "65%",
+			top: "47%",
 			left: "56%",
 			delay: 5,
 		},
 		{
 			country: "UAE",
 			flagUrl: "https://flagcdn.com/ae.svg",
-			top: "63%",
+			top: "46%",
 			left: "61%",
 			delay: 7,
 		},
 		{
 			country: "India",
 			flagUrl: "https://flagcdn.com/in.svg",
-			top: "67%",
+			top: "55%",
 			left: "66%",
 			delay: 8,
 		},
 		{
 			country: "Thailand",
 			flagUrl: "https://flagcdn.com/th.svg",
-			top: "55%",
+			top: "35%",
 			left: "81%",
 			delay: 10,
 		},
 		{
 			country: "China",
 			flagUrl: "https://flagcdn.com/cn.svg",
-			top: "62%",
+			top: "42%",
 			left: "73%",
 			delay: 9,
 		},
 		{
 			country: "South Korea",
 			flagUrl: "https://flagcdn.com/kr.svg",
-			top: "73%",
+			top: "63%",
 			left: "76%",
 			delay: 11,
 		},
 	];
 
 	return (
-		<section className="w-full bg-white py-20 px-6 font-sans overflow-hidden">
-			<div className="max-w-5xl mx-auto w-full space-y-12">
+		<section className="w-full bg-white py-20 px-[6%] font-sans overflow-hidden">
+			<div className="mx-auto w-full space-y-12">
 				{/* --- HEADER BLOCK --- */}
 				<div className="text-center space-y-3">
 					<motion.span
 						initial={{ opacity: 0 }}
 						whileInView={{ opacity: 1 }}
 						viewport={{ once: true }}
-						className="text-[#F7931E] text-xs font-bold uppercase tracking-widest block">
+						className="text-[#F7931E] text-lg font-bold uppercase tracking-tighter block">
 						Our Coverage
 					</motion.span>
 
@@ -144,64 +144,19 @@ export default function WorldCoverageSection() {
 						whileInView={{ opacity: 1, y: 0 }}
 						viewport={{ once: true }}
 						transition={{ duration: 0.5 }}
-						className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#05213A] tracking-tight max-w-2xl mx-auto leading-tight">
-						We Have Partnership With Hospitals Across The Globe
+						className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-[#05213A] tracking-tighter max-w-2xl mx-auto leading-tight">
+						We Have Partnership With <br className="hidden sm:block" />{" "}
+						Hospitals Across The Globe
 					</motion.h2>
 				</div>
 
 				{/* --- MAP HARNESS FRAME --- */}
-				<div className="relative w-full aspect-[16/10] max-w-4xl mx-auto">
-					{/* Main Dotted World Map Asset Background */}
-					{/* Replace src path with your static background dotted map canvas vector */}
+				<div className="relative w-full aspect-[16/10] mx-auto">
 					<img
-						src="/dotted-world-map.png"
+						src="/map.png"
 						alt="World Map Graphics Vector"
 						className="w-full h-full object-contain opacity-90 select-none pointer-events-none"
 					/>
-
-					{/* Optional Arc Connection Lines SVG Overlay to mock global routes */}
-					<svg
-						className="absolute inset-0 w-full h-full pointer-events-none z-0 text-[#F7931E]/40"
-						viewBox="0 0 800 500"
-						fill="none">
-						{/* Arcs routing out across regions */}
-						<path
-							d="M176,305 Q240,220 368,300"
-							stroke="currentColor"
-							strokeWidth="1"
-							strokeDasharray="3 3"
-						/>
-						<path
-							d="M408,300 Q440,200 408,240"
-							stroke="currentColor"
-							strokeWidth="1"
-							strokeDasharray="3 3"
-						/>
-						<path
-							d="M440,280 Q520,200 584,315"
-							stroke="currentColor"
-							strokeWidth="1"
-							strokeDasharray="3 3"
-						/>
-						<path
-							d="M448,325 Q480,240 528,325"
-							stroke="currentColor"
-							strokeWidth="1"
-							strokeDasharray="3 3"
-						/>
-						<path
-							d="M528,325 Q550,260 588,310"
-							stroke="currentColor"
-							strokeWidth="1"
-							strokeDasharray="3 3"
-						/>
-						<path
-							d="M528,325 Q580,280 648,310"
-							stroke="currentColor"
-							strokeWidth="1"
-							strokeDasharray="3 3"
-						/>
-					</svg>
 
 					{/* --- ACTIVE STAGGERED FLAGGING BADGES LAYER --- */}
 					{partners.map((partner) => (
