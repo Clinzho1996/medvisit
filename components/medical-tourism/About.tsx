@@ -213,8 +213,14 @@ export default function AboutAndQuoteSection() {
 				</motion.div>
 			</div>
 
-			{/* Optional decorative dotted abstract matrix on the lower right corner */}
-			<div className="absolute right-0 bottom-0 w-32 h-64 bg-[radial-gradient(#E2E4E9_1.5px,transparent_1.5px)] [background-size:12px_12px] opacity-60 pointer-events-none -z-10 hidden lg:block" />
+			<div className="absolute bottom-0 right-0 w-64 h-84  pointer-events-none select-none hidden md:block">
+				<Image
+					src="/circ.png"
+					alt="Wave"
+					fill
+					style={{ objectFit: "contain" }}
+				/>
+			</div>
 		</section>
 	);
 }

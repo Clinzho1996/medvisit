@@ -70,34 +70,13 @@ export default function MedicalServicesSection() {
 	return (
 		<section className="relative w-full bg-[#FAFCFE] py-20 px-[9%] font-sans overflow-hidden">
 			{/* Bottom Left Background Wave Grid Accent */}
-			<div className="absolute bottom-0 left-0 w-44 h-44 opacity-20 pointer-events-none select-none hidden md:block">
-				<svg
-					viewBox="0 0 200 200"
-					fill="none"
-					xmlns="http://www.w3.org/2000/svg"
-					className="w-full h-full text-gray-400">
-					<path
-						d="M0,200 Q40,160 80,140 T160,100"
-						stroke="currentColor"
-						strokeWidth="1"
-						strokeLinecap="round"
-						strokeDasharray="4 4"
-					/>
-					<path
-						d="M0,190 Q50,150 90,130 T170,90"
-						stroke="currentColor"
-						strokeWidth="1"
-						strokeLinecap="round"
-						strokeDasharray="4 4"
-					/>
-					<path
-						d="M0,180 Q60,140 100,120 T180,80"
-						stroke="currentColor"
-						strokeWidth="1"
-						strokeLinecap="round"
-						strokeDasharray="4 4"
-					/>
-				</svg>
+			<div className="absolute bottom-0 left-0 w-64 h-84  pointer-events-none select-none hidden md:block">
+				<Image
+					src="/circ.png"
+					alt="Wave"
+					fill
+					style={{ objectFit: "contain" }}
+				/>
 			</div>
 
 			<div className=" mx-auto w-full space-y-16 relative z-10">
