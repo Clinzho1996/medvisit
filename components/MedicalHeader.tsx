@@ -22,11 +22,12 @@ const MedicalNavbar = () => {
 
 	const navLinks = [
 		{ name: "Home", href: "/medical-tourism" },
-		{ name: "About us", href: "/about-us" },
-		{ name: "Services", href: "/services" },
-		{ name: "Process", href: "/process" },
-		{ name: "Blog", href: "/blog" },
-		{ name: "Contact us", href: "/contact-us" },
+		{ name: "About us", href: "/medical-tourism/about-us" },
+		{ name: "Services", href: "/medical-tourism/services" },
+		{ name: "Hospitals", href: "/medical-tourism/our-hospitals" },
+		{ name: "Process", href: "/medical-tourism/process" },
+		{ name: "Blog", href: "/medical-tourism/blog" },
+		{ name: "Contact us", href: "/medical-tourism/contact-us" },
 	];
 
 	const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {

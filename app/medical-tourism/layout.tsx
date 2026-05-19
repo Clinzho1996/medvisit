@@ -2,6 +2,7 @@ import MedicalVisitFooter from "@/components/MedicalFooter";
 import MedicalNavbar from "@/components/MedicalHeader";
 import { cn } from "@/lib/utils";
 import { Geist, Nunito_Sans } from "next/font/google";
+import "../globals.css";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
