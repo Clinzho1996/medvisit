@@ -2,6 +2,7 @@
 
 import { IconCaretRightFilled } from "@tabler/icons-react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const HeroSection = () => {
 	return (
@@ -26,14 +27,16 @@ const HeroSection = () => {
 					initial={{ opacity: 0, scale: 0.9 }}
 					animate={{ opacity: 1, scale: 1 }}
 					transition={{ delay: 0.4, duration: 0.5 }}>
-					<button className="group relative inline-flex items-center gap-2 bg-gradient-to-b from-[#F4911E] to-[#e0831a] text-white px-8 py-3 rounded-md font-bold text-sm shadow-[#F7931E70] shadow-lg transition-all hover:brightness-110 active:scale-95 ">
-						Get Started
-						<IconCaretRightFilled
-							size={16}
-							stroke={3}
-							className="transition-transform group-hover:translate-x-1"
-						/>
-					</button>
+					<Link href="/second-opinion" passHref>
+						<button className="group relative inline-flex items-center gap-2 bg-gradient-to-b from-[#F4911E] to-[#e0831a] text-white px-8 py-3 rounded-md font-bold text-sm shadow-[#F7931E70] shadow-lg transition-all hover:brightness-110 active:scale-95 ">
+							Get Started
+							<IconCaretRightFilled
+								size={16}
+								stroke={3}
+								className="transition-transform group-hover:translate-x-1"
+							/>
+						</button>
+					</Link>
 				</motion.div>
 			</div>
 		</section>

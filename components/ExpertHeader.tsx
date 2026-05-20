@@ -130,7 +130,7 @@ const ExpertNavbar = () => {
 												<a
 													key={item.name}
 													href={item.href}
-													className="block px-4 py-2 text-[13px] text-[#05213A] hover:text-[#F4911E] hover:bg-gray-50 transition-colors">
+													className="block px-4 font-bold py-2 text-[13px] text-[#05213A] hover:text-[#F4911E] hover:bg-gray-50 transition-colors">
 													{item.name}
 												</a>
 											))}
