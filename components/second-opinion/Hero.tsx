@@ -63,7 +63,7 @@ export default function HeroSection() {
 
 								<div className="mt-6">
 									<Link
-										href="#physicians"
+										href="/second-opinion/patients-families"
 										className="inline-block text-xs sm:text-sm font-bold text-[#F39223] underline underline-offset-4 hover:text-[#d97d1a]">
 										Learn More
 									</Link>
@@ -89,7 +89,7 @@ export default function HeroSection() {
 
 								<div className="mt-6">
 									<Link
-										href="#physicians"
+										href="/second-opinion/referring-physicians"
 										className="inline-block text-xs sm:text-sm font-bold text-[#F39223] underline underline-offset-4 hover:text-[#d97d1a]">
 										Learn More
 									</Link>

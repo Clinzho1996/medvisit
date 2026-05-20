@@ -153,6 +153,12 @@
 		background-position: bottom;
 	}
 
+	.bread2-bg {
+		background-image: url("/brd2.png");
+		background-size: cover;
+		background-position: bottom;
+	}
+
 	.birth-bg {
 		background-image: url("/bgbirth.png");
 		background-size: cover;

@@ -21,12 +21,12 @@ const ExpertNavbar = () => {
 	const [searchQuery, setSearchQuery] = useState("");
 
 	const navLinks = [
-		{ name: "Home", href: "/medical-tourism" },
-		{ name: "About us", href: "/about-us" },
-		{ name: "Services", href: "/services" },
-		{ name: "Process", href: "/process" },
-		{ name: "Blog", href: "/blog" },
-		{ name: "Start Consultation", href: "/contact-us" },
+		{ name: "Home", href: "/second-opinion" },
+		{ name: "About us", href: "/second-opinion/about-us" },
+		{ name: "Specialties", href: "/second-opinion/specialties" },
+		{ name: "Process", href: "/second-opinion/process" },
+		{ name: "Contact us", href: "/second-opinion/contact-us" },
+		{ name: "Start Consultation", href: "/second-opinion/start-consultation" },
 	];
 
 	const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
