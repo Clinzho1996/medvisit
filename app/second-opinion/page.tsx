@@ -1,6 +1,7 @@
 import Mentions from "@/components/medical-tourism/Mentions";
 import TestimonialCarousel from "@/components/medical-tourism/Testimonial";
 import MedicalConsultation from "@/components/second-opinion/About";
+import FAQSection from "@/components/second-opinion/Faq";
 import HeroSection from "@/components/second-opinion/Hero";
 import OurServices from "@/components/second-opinion/Services";
 import MedicalSpecializations from "@/components/second-opinion/Specialization";
@@ -18,6 +19,7 @@ function SecondOpinion() {
 			<div className="mt-10 sm:mt-20">
 				<Mentions />
 			</div>
+			<FAQSection />
 		</div>
 	);
 }
