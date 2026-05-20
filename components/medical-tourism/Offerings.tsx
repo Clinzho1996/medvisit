@@ -25,37 +25,37 @@ const offeringsData: Offering[] = [
 		id: "talk-to-experts",
 		title: "Talk To Our Experts From Anywhere",
 		description:
-			"Connect virtually with top-tier medical professionals from the comfort of your home, ensuring seamless communication no matter where you are located.",
+			"We set up video conferencing calls for you with our expert consultants to establish rapport between you and the doctors and give you opportunities to ask questions before you travel.",
 	},
 	{
 		id: "visa-assistance",
 		title: "Visa Assistance",
 		description:
-			"We provide end-to-end documentation and guidance support to ensure your medical visa process is smooth, swift, and stress-free.",
+			"Processing visa can sometimes be complex. However, our trained assistants will help with all your visa procedures from documentation and beyond so you focus on getting ready for treatment.",
 	},
 	{
 		id: "airport-shuttle",
 		title: "Airport Shuttle / Concierge Services",
 		description:
-			"From the moment you land, our dedicated transport and concierge teams are ready to assist you with airport pickups, luggage, and immediate transfers.",
+			"We desire the best for our patients and have looked beyond just airport shuttle to providing concierge services to comfortably cater for your needs throughout your stay.",
 	},
 	{
 		id: "logistics",
 		title: "Logistics Of Your Stay",
 		description:
-			"We help manage all local accommodation, transport, and daily essentials so you and your family can focus entirely on recovery.",
+			"We provide all-round logistics to give patients a memorable stay including assisting you to find affordable hotel or guest house tailored to your needs, foods, translator etc.",
 	},
 	{
 		id: "hospital-arrangements",
 		title: "Hospital Arrangements",
 		description:
-			"Our team prioritizes your appointments, admissions, and surgical scheduling to minimize waiting times and maximize efficiency.",
+			"To ensure your energy is solely expended on you Getting better, we are sure to help you handle all formalities like check in, admission, taking care of post-discharge follow-up etc",
 	},
 	{
 		id: "post-treatment",
 		title: "Post Treatment Tours",
 		description:
-			"If cleared by your medical team, we organize relaxing local tours and wellness experiences to assist in your holistic rejuvenation before returning home.",
+			"Should you desire it, we assist with arranging tours upon treatment completion so you can see the sights and sounds of the region after you’re feeling your best",
 	},
 ];
 

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Prefooter() {
 	const currentYear = new Date().getFullYear();
@@ -50,12 +51,14 @@ export default function Prefooter() {
 						<p className="text-white text-base md:text-base font-light">
 							We're known for providing high-quality health care and more!
 						</p>
-						<motion.button
-							whileHover={{ scale: 1.03 }}
-							whileTap={{ scale: 0.98 }}
-							className="mt-8 bg-[#F7931E] hover:bg-[#e27222] text-white text-xs md:text-sm font-bold px-6 py-3 rounded shadow-lg transition-colors duration-200">
-							Click Here To Get Started
-						</motion.button>
+						<Link href="/medical-tourism/contact-us">
+							<motion.button
+								whileHover={{ scale: 1.03 }}
+								whileTap={{ scale: 0.98 }}
+								className="mt-8 cursor-pointer bg-[#F7931E] hover:bg-[#e27222] text-white text-xs md:text-sm font-bold px-6 py-3 rounded shadow-lg transition-colors duration-200">
+								Click Here To Get Started
+							</motion.button>
+						</Link>
 					</motion.div>
 
 					{/* Right Image/Graphic Area */}

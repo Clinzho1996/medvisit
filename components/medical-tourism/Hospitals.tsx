@@ -1,6 +1,7 @@
 "use client";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 interface HospitalCardProps {
@@ -192,14 +193,16 @@ export default function ExploreHospitalsSection() {
 				</div>
 
 				{/* --- FOOTER ACTION TRIGGER --- */}
-				<div className="pt-4 text-center">
+				<Link
+					href="/medical-tourism/contact-us"
+					className="pt-4 text-center justify-center flex">
 					<motion.button
 						whileHover={{ scale: 1.03 }}
 						whileTap={{ scale: 0.98 }}
 						className="border border-[#F7931E] hover:bg-[#F7931E] hover:text-white text-[#F7931E] text-xs font-bold px-12 py-3 cursor-pointer rounded-md transition-colors duration-200">
 						Learn More
 					</motion.button>
-				</div>
+				</Link>
 			</div>
 		</section>
 	);

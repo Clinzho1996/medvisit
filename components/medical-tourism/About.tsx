@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 
 export default function AboutAndQuoteSection() {
@@ -19,7 +20,9 @@ export default function AboutAndQuoteSection() {
 	};
 
 	return (
-		<section className="relative w-full bg-white font-sans min-h-[700px]">
+		<section
+			id="form"
+			className="relative w-full bg-white font-sans min-h-[700px]">
 			{/* --- UPPER DEEP NAVY BANNER BACKGROUND --- */}
 			<div className="absolute top-0 left-0 right-0 h-[30px] sm:h-[140px] bg-[#05213A] z-0 overflow-hidden">
 				{/* Abstract vector wave line graphic indicators on left */}
@@ -61,12 +64,14 @@ export default function AboutAndQuoteSection() {
 					</div>
 
 					<motion.div className="pt-2">
-						<motion.button
-							whileHover={{ scale: 1.03 }}
-							whileTap={{ scale: 0.98 }}
-							className="border border-[#F7931E] hover:bg-[#F7931E] hover:text-white text-[#F7931E]  text-sm font-bold px-12 py-2.5 cursor-pointer rounded-md transition-colors duration-200">
-							Learn More
-						</motion.button>
+						<Link href="/medical-tourism/about-us">
+							<motion.button
+								whileHover={{ scale: 1.03 }}
+								whileTap={{ scale: 0.98 }}
+								className="border border-[#F7931E] hover:bg-[#F7931E] hover:text-white text-[#F7931E]  text-sm font-bold px-12 py-2.5 cursor-pointer rounded-md transition-colors duration-200">
+								Learn More
+							</motion.button>
+						</Link>
 					</motion.div>
 				</motion.div>
 

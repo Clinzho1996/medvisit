@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 interface ServiceCardProps {
@@ -124,12 +125,14 @@ export default function MedicalServicesSection() {
 
 				{/* --- FOOTER SELECTION ACTION --- */}
 				<motion.div className="pt-2 text-center">
-					<motion.button
-						whileHover={{ scale: 1.03 }}
-						whileTap={{ scale: 0.98 }}
-						className="border border-[#F7931E] hover:bg-[#F7931E] hover:text-white text-[#F7931E]  text-sm font-bold px-12 py-2.5 cursor-pointer rounded-md transition-colors duration-200">
-						View More Services
-					</motion.button>
+					<Link href="/medical-tourism/services" passHref>
+						<motion.button
+							whileHover={{ scale: 1.03 }}
+							whileTap={{ scale: 0.98 }}
+							className="border border-[#F7931E] hover:bg-[#F7931E] hover:text-white text-[#F7931E]  text-sm font-bold px-12 py-2.5 cursor-pointer rounded-md transition-colors duration-200">
+							View More Services
+						</motion.button>
+					</Link>
 				</motion.div>
 			</div>
 		</section>

@@ -2,6 +2,7 @@
 
 import { motion, Variants } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function MedicalTourismHero() {
 	// Stagger variants for the text content
@@ -69,12 +70,14 @@ export default function MedicalTourismHero() {
 						</motion.p>
 
 						<motion.div variants={itemVariants} className="pt-2">
-							<motion.button
-								whileHover={{ scale: 1.03 }}
-								whileTap={{ scale: 0.98 }}
-								className="border-2 border-[#F7931E] hover:bg-[#F7931E] hover:text-white text-[#F7931E]  text-sm font-bold px-12 py-2.5 cursor-pointer rounded-md transition-colors duration-200">
-								Learn More
-							</motion.button>
+							<Link href="/medical-tourism/#form">
+								<motion.button
+									whileHover={{ scale: 1.03 }}
+									whileTap={{ scale: 0.98 }}
+									className="border-2 border-[#F7931E] hover:bg-[#F7931E] hover:text-white text-[#F7931E]  text-sm font-bold px-12 py-2.5 cursor-pointer rounded-md transition-colors duration-200">
+									Get a Free Quote
+								</motion.button>
+							</Link>
 						</motion.div>
 					</motion.div>
 				</div>

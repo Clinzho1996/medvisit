@@ -12,7 +12,9 @@ function Services() {
 our hospitals provide"
 			/>
 			<MedicalProceduresSection />
-			<Mentions />
+			<div className="mt-10 sm:mt-20">
+				<Mentions />
+			</div>
 			<Prefooter />
 		</div>
 	);

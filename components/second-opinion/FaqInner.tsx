@@ -15,23 +15,37 @@ const faqData: FAQItem[] = [
 	{
 		id: "faq-1",
 		number: "01.",
-		question: "What is Medvisit?",
+		question: "What is a second opinion service, and why should I consider it?",
 		answer:
-			"Medvisit allows you consult top medical specialists in the UK, USA, and Europe without having to travel. Simply contact medvisit by phone, online, or in person at one of Medvisit's partner clinics. We have a dedicated medical support team that will help you prepare your case file, communicate with the foreign expert, and follow up.",
+			"A second opinion service involves seeking the expertise of another medical professional to validate or provide additional insights into a diagnosis or treatment. It adds an extra layer of confidence and ensures informed decision-making about your healthcare.",
 	},
 	{
 		id: "faq-2",
 		number: "02.",
-		question: "How can Medvisit help me?",
+		question: "How do I register for your second opinion service?",
 		answer:
-			"We provide clear, expert second opinions to validate your current diagnostics, assist with cross-border medical scheduling, facilitate complex remote consultations, and coordinate complete end-to-end logistics if international medical travel becomes recommended.",
+			"Click on the ‘Start Consultation’ button on our website, follow the simple steps to create an account, and provide necessary information or you can just call our customer support number. Once registered, you can access our comprehensive services.",
 	},
 	{
 		id: "faq-3",
 		number: "03.",
-		question: "What are the available medical specialities?",
+		question: "How is my privacy protected during the second opinion process?",
 		answer:
-			"Our expansive network includes highly credentialed specialists covering Cardiology, Oncology, Neurology, Orthopedics, Bariatric Surgery, Endocrinology, Advanced Fertility treatment fields, and more.",
+			"We prioritize your privacy. We adhere to strict data protection regulations, and your medical information is securely handled and shared only with the authorized specialists involved in your case.",
+	},
+	{
+		id: "faq-4",
+		number: "04.",
+		question: "How are specialists matched to my case?",
+		answer:
+			"Our matching process considers the nature of your medical condition, ensuring you are connected with a specialist whose expertise aligns with your specific needs.",
+	},
+	{
+		id: "faq-5",
+		number: "05.",
+		question: "What information do I need to provide for the second opinion?",
+		answer:
+			"We require your medical records, test results, and any relevant information about your condition. This ensures our specialists have a comprehensive understanding for an accurate evaluation.",
 	},
 ];
 
