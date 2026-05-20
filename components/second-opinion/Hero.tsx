@@ -47,7 +47,7 @@ export default function HeroSection() {
 			<div className="absolute -bottom-[20] right-0 z-20 w-full px-4 lg:max-w-4xl lg:px-0">
 				<div className="mx-auto grid grid-cols-1 md:grid-cols-2 bg-white shadow-2xl  overflow-hidden">
 					{/* Card 1: Patients & Families */}
-					<div className="relative flex flex-col justify-between border-b border-gray-100 p-8 md:border-b-0 md:border-r border-l-4 border-b-[#F39223] sm:border-l-[#F39223]">
+					<div className="relative flex flex-col justify-between border-b border-gray-100 p-8 md:border-b-0 md:border-r border-l-0 sm:border-l-4 border-b-[#F39223] sm:border-l-[#F39223]">
 						<div className="flex gap-4">
 							<div className="flex h-15 w-15 shrink-0 items-center justify-center rounded-lg  text-[#F39223]">
 								<Image src="/pat.png" alt="Patient" width={50} height={50} />
@@ -73,7 +73,7 @@ export default function HeroSection() {
 					</div>
 
 					{/* Card 2: Referring Physicians */}
-					<div className="relative flex flex-col justify-between p-8 border-t-4 border-t-transparent md:border-l-4 border-b-[#F39223] sm:border-l-[#F39223]">
+					<div className="relative flex flex-col justify-between border-b border-gray-100 p-8 md:border-b-0 md:border-r border-l-0 sm:border-l-4 border-b-[#F39223] sm:border-l-[#F39223]">
 						<div className="flex gap-4">
 							<div className="flex h-15 w-15 shrink-0 items-center justify-center rounded-lg  text-[#F39223]">
 								<Image src="/ref.png" alt="Patient" width={50} height={50} />

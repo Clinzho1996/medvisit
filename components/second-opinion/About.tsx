@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function MedicalConsultation() {
 	return (
-		<section className="mx-auto px-6 py-16 md:px-[9%] lg:py-24 mt-20">
+		<section className="mx-auto px-6 py-16 md:px-[9%] lg:py-24 mt-70 sm:mt-20">
 			<div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
 				{/* Left Content Column */}
 				<div className="space-y-6 lg:col-span-6">
