@@ -9,7 +9,7 @@ function Breadcrumb({ title }: { title: string }) {
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			transition={{ duration: 0.6 }}
-			className="bread2-bg w-full h-50 sm:h-90 mx-auto py-16 px-[9%]  sm:py-20 justify-center items-center space-y-2">
+			className="bread2-bg w-full h-70 sm:h-90 mx-auto py-16 px-[9%]  sm:py-20 justify-center items-center space-y-2">
 			<div className="mx-auto flex flex-row justify-between items-center">
 				<motion.h2
 					initial={{ y: 30, opacity: 0 }}
