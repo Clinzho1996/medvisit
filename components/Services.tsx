@@ -12,6 +12,7 @@ interface ServiceProps {
 	image: string;
 	buttonText: string;
 	reverse?: boolean;
+	link: string;
 }
 
 const ServiceBlock = ({
@@ -22,6 +23,7 @@ const ServiceBlock = ({
 	image,
 	buttonText,
 	reverse,
+	link,
 }: ServiceProps) => {
 	return (
 		<div
@@ -70,10 +72,13 @@ const ServiceBlock = ({
 					))}
 				</div>
 
-				<button className="flex items-center gap-2 bg-[#F4911E] text-white px-6 py-2.5 rounded-lg font-bold text-xs shadow-[#F7931E70] shadow-lg hover:brightness-110 transition-all">
+				<a
+					href={link}
+					className="flex w-fit items-center gap-2 bg-[#F4911E] text-white px-6 py-2.5 rounded-lg font-bold text-xs shadow-[#F7931E70] shadow-lg hover:brightness-110 transition-all"
+					target="_blank">
 					{buttonText}
 					<IconCaretRightFilled size={14} stroke={3} />
-				</button>
+				</a>
 			</motion.div>
 
 			{/* Image with Framed Background */}
@@ -114,6 +119,7 @@ const ServicesSection = () => {
 			],
 			image: "/medical.png",
 			buttonText: "Start Your Journey",
+			link: "/medical-tourism",
 		},
 		{
 			tag: "International Second Medical Opinion Service",
@@ -137,6 +143,7 @@ const ServicesSection = () => {
 			],
 			image: "/second.png",
 			buttonText: "Book Second Opinion",
+			link: "/second-opinion",
 			reverse: true,
 		},
 		{
@@ -160,6 +167,7 @@ const ServicesSection = () => {
 			],
 			image: "/global.png",
 			buttonText: "Start Your Journey",
+			link: "/global-mobility",
 		},
 	];
 

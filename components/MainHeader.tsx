@@ -24,7 +24,7 @@ const Navbar = () => {
 		{ name: "Medical Tourism", href: "/medical-tourism" },
 		{ name: "Second Medical Opinion", href: "/second-opinion" },
 		{ name: "Global Mobility", href: "/global-mobility" },
-		{ name: "Contact Us", href: "/contact-us" },
+		{ name: "Contact Us", href: "/medical-tourism/contact-us" },
 	];
 
 	const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
