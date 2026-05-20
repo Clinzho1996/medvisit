@@ -35,7 +35,7 @@ export default function HeroSection() {
 
 					<div className="mt-8">
 						<Link
-							href="#get-started"
+							href="/second-opinion/start-consultation"
 							className="inline-block rounded-md bg-[#F39223] px-12 py-3.5 text-sm sm:text-lg font-bold text-white transition-all duration-200 hover:bg-[#d97d1a] active:scale-[0.98] shadow-lg shadow-orange-950/20">
 							Get Started
 						</Link>

@@ -126,7 +126,7 @@ export default function MedicalSpecializations() {
 				{/* --- Footer Anchor Action Link --- */}
 				<div className="mt-12 text-center">
 					<Link
-						href="#all-specialties"
+						href="/second-opinion/specialties"
 						className="inline-block tracking-tighter border-b-2 border-[#F39223] pb-1 text-sm sm:text-lg font-bold text-[#F39223] transition-colors duration-200 hover:text-[#d97d1a] hover:border-[#d97d1a]">
 						Explore Our Specialties
 					</Link>

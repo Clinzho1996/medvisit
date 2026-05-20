@@ -5,6 +5,7 @@ import {
 	IconBrandFacebook,
 	IconBrandInstagram,
 	IconBrandX,
+	IconChevronDown,
 	IconMailOpened,
 	IconMapPin,
 	IconMenu2,
@@ -19,14 +20,25 @@ import { useState } from "react";
 const ExpertNavbar = () => {
 	const [isSearchOpen, setIsSearchOpen] = useState(false);
 	const [searchQuery, setSearchQuery] = useState("");
+	const [isSpecialtiesOpen, setIsSpecialtiesOpen] = useState(false);
 
 	const navLinks = [
 		{ name: "Home", href: "/second-opinion" },
 		{ name: "About us", href: "/second-opinion/about-us" },
-		{ name: "Specialties", href: "/second-opinion/specialties" },
+		{ name: "Specialties", href: "#", isDropdown: true },
 		{ name: "Process", href: "/second-opinion/process" },
 		{ name: "Contact us", href: "/second-opinion/contact-us" },
 		{ name: "Start Consultation", href: "/second-opinion/start-consultation" },
+	];
+
+	const specialtiesDropdownItems = [
+		{ name: "Our specialties", href: "/second-opinion/specialties" },
+		{ name: "FAQs", href: "/second-opinion/faq" },
+		{
+			name: "Referring Physicians",
+			href: "/second-opinion/referring-physicians",
+		},
+		{ name: "Patients & Families", href: "/second-opinion/patients-families" },
 	];
 
 	const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
@@ -37,7 +49,7 @@ const ExpertNavbar = () => {
 	};
 
 	return (
-		<header className="w-full font-sans border-b border-gray-100 shadow-2xl shadow-[#05213A]/10  sticky top-0 z-50 bg-white">
+		<header className="w-full font-sans border-b border-gray-100 shadow-2xl shadow-[#05213A]/10 sticky top-0 z-50 bg-white">
 			{/* --- TOP BAR --- */}
 			<div className="bg-[#FAFAFA] border-b border-gray-200 py-2 hidden lg:block">
 				<div className="flex justify-between items-center text-[11px] text-gray-600 px-[9%]">
@@ -77,7 +89,7 @@ const ExpertNavbar = () => {
 
 			{/* --- MAIN NAVIGATION --- */}
 			<nav className="bg-white w-full">
-				<div className=" flex items-center justify-between h-15 ml-[8%]">
+				<div className="flex items-center justify-between h-15 ml-[8%]">
 					{/* Logo */}
 					<Link href="/">
 						<div className="flex items-center gap-2 shrink-0">
@@ -94,12 +106,38 @@ const ExpertNavbar = () => {
 					{/* Desktop Links */}
 					<div className="hidden lg:flex items-center gap-8">
 						{navLinks.map((link) => (
-							<a
+							<div
 								key={link.name}
-								href={link.href}
-								className="text-[13px] font-bold text-[#05213A] hover:text-[#F4911E] transition-colors">
-								{link.name}
-							</a>
+								className="relative"
+								onMouseEnter={() =>
+									link.isDropdown && setIsSpecialtiesOpen(true)
+								}
+								onMouseLeave={() =>
+									link.isDropdown && setIsSpecialtiesOpen(false)
+								}>
+								<a
+									href={link.href}
+									className="text-[13px] font-bold text-[#05213A] hover:text-[#F4911E] transition-colors flex items-center gap-1">
+									{link.name}
+									{link.isDropdown && <IconChevronDown size={14} />}
+								</a>
+
+								{/* Dropdown Menu - Added pt-2 to bridge the gap */}
+								{link.isDropdown && isSpecialtiesOpen && (
+									<div className="absolute top-full left-0 pt-2 w-64 z-50">
+										<div className="bg-white shadow-lg rounded-lg border border-gray-100 py-2">
+											{specialtiesDropdownItems.map((item) => (
+												<a
+													key={item.name}
+													href={item.href}
+													className="block px-4 py-2 text-[13px] text-[#05213A] hover:text-[#F4911E] hover:bg-gray-50 transition-colors">
+													{item.name}
+												</a>
+											))}
+										</div>
+									</div>
+								)}
+							</div>
 						))}
 					</div>
 
@@ -143,12 +181,31 @@ const ExpertNavbar = () => {
 									className="bg-[#05213A] border-none text-white w-[300px]">
 									<div className="mt-12 flex flex-col gap-6 p-6">
 										{navLinks.map((link) => (
-											<a
-												key={link.name}
-												href={link.href}
-												className="text-lg font-medium border-b border-white/10 pb-2">
-												{link.name}
-											</a>
+											<div key={link.name}>
+												{link.isDropdown ? (
+													<>
+														<div className="text-lg font-medium border-b border-white/10 pb-2 mb-2">
+															{link.name}
+														</div>
+														<div className="flex flex-col gap-3 pl-4">
+															{specialtiesDropdownItems.map((item) => (
+																<a
+																	key={item.name}
+																	href={item.href}
+																	className="text-base font-medium text-white/80 hover:text-[#F4911E] transition-colors">
+																	{item.name}
+																</a>
+															))}
+														</div>
+													</>
+												) : (
+													<a
+														href={link.href}
+														className="text-lg font-medium border-b border-white/10 pb-2 block">
+														{link.name}
+													</a>
+												)}
+											</div>
 										))}
 										<div className="bg-[#F4911E] p-4 rounded-xl flex items-center gap-3 mt-4">
 											<Image
@@ -199,7 +256,7 @@ const ExpertNavbar = () => {
 							</button>
 							<button
 								onClick={() => setIsSearchOpen(false)}
-								className=" text-gray-400">
+								className="text-gray-400">
 								<IconX size={24} />
 							</button>
 						</form>

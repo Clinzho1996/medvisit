@@ -190,13 +190,13 @@ export default function TopHospitals() {
 			{/* --- Bottom Dual Call to Action Button Array --- */}
 			<div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
 				<Link
-					href="#get-started"
+					href="/second-opinion/start-consultation"
 					className="w-full text-center sm:w-auto rounded-md bg-[#F39223] px-8 py-3 text-sm font-bold text-white transition-all duration-200 hover:bg-[#d97d1a] hover:scale-105 active:scale-[0.98] shadow-sm">
 					Get Started
 				</Link>
 
 				<Link
-					href="#more-hospitals"
+					href="/medical-tourism/our-hospitals"
 					className="w-full text-center sm:w-auto rounded-md border border-[#F39223] bg-white px-8 py-3 text-sm font-bold text-[#F39223] transition-all duration-200 hover:bg-orange-50 hover:scale-105 active:scale-[0.98]">
 					See More Hospitals
 				</Link>

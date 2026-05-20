@@ -60,7 +60,7 @@ export default function FAQSection() {
 	return (
 		<section className="mx-auto px-6  md:px-[9%] ">
 			{/* --- Section Header --- */}
-			<div className="mb-14 text-center border-t py-16 lg:py-24 ">
+			<div className="mb-14 text-center border-t py-16 lg:pt-24 pb-0 ">
 				<h2 className="text-3xl font-extrabold tracking-tight text-[#0A2540] md:text-4xl">
 					Frequently Asked Questions
 				</h2>
@@ -130,7 +130,7 @@ export default function FAQSection() {
 					Help.{" "}
 				</span>
 				<Link
-					href="#consult-now"
+					href="/second-opinion/start-consultation"
 					className="ml-1 inline-block border-b-2 border-[#F7931E] pb-0.5 text-[#F7931E] transition-colors hover:text-[#F7931E] hover:border-[#F7931E] font-bold">
 					Consult Expert Doctors Now
 				</Link>

@@ -35,7 +35,7 @@ export default function ExpertFooter() {
 						</p>
 
 						<Link
-							href="#get-started"
+							href="/second-opinion/start-consultation"
 							className="mt-8 inline-block rounded-md bg-white px-8 py-3 text-sm font-bold text-[#EFA343] transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98] shadow-md">
 							Click Here To Get Started
 						</Link>
