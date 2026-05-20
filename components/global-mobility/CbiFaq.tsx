@@ -10,24 +10,28 @@ const CbiFAQSection = () => {
 
 	const faqs = [
 		{
-			question: "Is Chilean birth tourism legal in 2026?",
+			question: "What is the minimum investment?",
 			answer:
-				"Yes. Chile's jus soli (right of soil) law is enshrined in its constitution. Children born to tourists, temporary residents, and permanent residents automatically receive Chilean citizenship. This is fully legal and government-recognized.",
+				"$90,000 for São Tomé & Príncipe. Other programs start at $150,000-$250,000.",
 		},
 		{
-			question: "Do I need to speak Spanish?",
-			answer:
-				"No, Spanish proficiency is not a requirement for birth citizenship or initial residency applications. However, basic Spanish is helpful for daily life, and our concierge team provides full translation support.",
+			question: "How long does processing take?",
+			answer: "8-24 months depending on the program.",
 		},
 		{
-			question: "Can I combine birth citizenship with residency?",
+			question: "Do I need to travel to the country?",
 			answer:
-				"Absolutely. Many families apply for residency while awaiting a birth, or use the birth of a Chilean child as a legal pathway to expedite their own permanent residency status.",
+				"Some programs require a visit; others do not. We’ll advise based on your chosen program.",
 		},
 		{
-			question: "What if I already have a Nigerian passport?",
+			question: "Can my family be included?",
 			answer:
-				"Both Nigeria and Chile allow dual citizenship. You do not need to renounce your Nigerian passport to acquire Chilean citizenship or residency.",
+				"Yes. Most programs allow spouses, children, and sometimes parents to be included.",
+		},
+		{
+			question: "Is the investment refundable?",
+			answer:
+				"No. CBI investments are contributions to national development funds or real estate purchases.",
 		},
 	];
 

@@ -10,24 +10,28 @@ const ResFAQSection = () => {
 
 	const faqs = [
 		{
-			question: "Is Chilean birth tourism legal in 2026?",
-			answer:
-				"Yes. Chile's jus soli (right of soil) law is enshrined in its constitution. Children born to tourists, temporary residents, and permanent residents automatically receive Chilean citizenship. This is fully legal and government-recognized.",
-		},
-		{
 			question: "Do I need to speak Spanish?",
 			answer:
-				"No, Spanish proficiency is not a requirement for birth citizenship or initial residency applications. However, basic Spanish is helpful for daily life, and our concierge team provides full translation support.",
+				"Basic Spanish helps but is not required. We provide translation support.",
 		},
 		{
-			question: "Can I combine birth citizenship with residency?",
+			question: "Can I work in Chile on temporary residency?",
 			answer:
-				"Absolutely. Many families apply for residency while awaiting a birth, or use the birth of a Chilean child as a legal pathway to expedite their own permanent residency status.",
+				"Yes. Both the Relative and Rentier tracks grant full work rights.",
 		},
 		{
-			question: "What if I already have a Nigerian passport?",
+			question: "How long does processing take?",
 			answer:
-				"Both Nigeria and Chile allow dual citizenship. You do not need to renounce your Nigerian passport to acquire Chilean citizenship or residency.",
+				"9-12 months for temporary residency. Permanent residency takes 1-2 years.",
+		},
+		{
+			question: "What if I don't have a Chilean-born child?",
+			answer:
+				"The Rentier track is available for investors and those with passive income.",
+		},
+		{
+			question: "Can I bring my family?",
+			answer: "Yes. Spouses and children can be included in the application.",
 		},
 	];
 

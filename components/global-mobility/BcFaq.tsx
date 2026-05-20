@@ -10,24 +10,44 @@ const BcFAQSection = () => {
 
 	const faqs = [
 		{
-			question: "Is Chilean birth tourism legal in 2026?",
+			question: "Is this really legal?",
 			answer:
-				"Yes. Chile's jus soli (right of soil) law is enshrined in its constitution. Children born to tourists, temporary residents, and permanent residents automatically receive Chilean citizenship. This is fully legal and government-recognized.",
+				"Yes. Chilean citizenship law is based on jus soli — a constitutional principle that grants citizenship to anyone born on Chilean soil. This is not a loophole; it’s the law",
 		},
 		{
 			question: "Do I need to speak Spanish?",
 			answer:
-				"No, Spanish proficiency is not a requirement for birth citizenship or initial residency applications. However, basic Spanish is helpful for daily life, and our concierge team provides full translation support.",
+				"No. We provide translation services throughout your stay. All medical staff at partner clinics speak English, and our local team provides full translation support.",
 		},
 		{
-			question: "Can I combine birth citizenship with residency?",
+			question: "How long do I need to stay in Chile?",
 			answer:
-				"Absolutely. Many families apply for residency while awaiting a birth, or use the birth of a Chilean child as a legal pathway to expedite their own permanent residency status.",
+				"Most packages require 60-90 days. The Basic Package requires the minimum stay for birth registration and document processing. Comfort and Premium packages include extended concierge support.",
 		},
 		{
-			question: "What if I already have a Nigerian passport?",
+			question: "Can both parents travel?",
 			answer:
-				"Both Nigeria and Chile allow dual citizenship. You do not need to renounce your Nigerian passport to acquire Chilean citizenship or residency.",
+				"Yes. The cost breakdown assumes two adults traveling. If only one parent travels, costs will be lower.",
+		},
+		{
+			question: "What about accommodation?",
+			answer:
+				"We coordinate accommodation based on your package. Basic packages include assistance finding accommodation; Comfort and Premium packages include arranged accommodation with local support.",
+		},
+		{
+			question: "What if the baby needs medical care?",
+			answer:
+				"Chile has world-class healthcare. Partner clinics provide comprehensive care. All packages include medical coordination.",
+		},
+		{
+			question: "Can I combine this with Chilean residency?",
+			answer:
+				"Yes. Parents of Chilean-born children qualify for expedited residency under the “Chilean Relative” track. See our Chilean Residency page for details.",
+		},
+		{
+			question: "What happens if the application is denied?",
+			answer:
+				"Denial is extremely rare (99% success rate). In the unlikely event of denial, we work with you to appeal or explore alternative options.",
 		},
 	];
 

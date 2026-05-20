@@ -10,24 +10,29 @@ const GloFAQSection = () => {
 
 	const faqs = [
 		{
-			question: "Is Chilean birth tourism legal in 2026?",
+			question: "What is the minimum investment for a Golden Visa?",
 			answer:
-				"Yes. Chile's jus soli (right of soil) law is enshrined in its constitution. Children born to tourists, temporary residents, and permanent residents automatically receive Chilean citizenship. This is fully legal and government-recognized.",
+				"Starting at $250,000 for Panama real estate, up to $545,000 for UAE Golden Visa.",
 		},
 		{
-			question: "Do I need to speak Spanish?",
+			question: "Do I need to live in the country?",
 			answer:
-				"No, Spanish proficiency is not a requirement for birth citizenship or initial residency applications. However, basic Spanish is helpful for daily life, and our concierge team provides full translation support.",
+				"Some programs require no minimum stay (UAE, Panama, Uruguay). Portugal requires 7 days per year.",
 		},
 		{
-			question: "Can I combine birth citizenship with residency?",
+			question: "Can my family be included?",
 			answer:
-				"Absolutely. Many families apply for residency while awaiting a birth, or use the birth of a Chilean child as a legal pathway to expedite their own permanent residency status.",
+				"Yes. Spouses, children, and in some programs, parents can be included.",
 		},
 		{
-			question: "What if I already have a Nigerian passport?",
+			question: "What is the path to citizenship?",
 			answer:
-				"Both Nigeria and Chile allow dual citizenship. You do not need to renounce your Nigerian passport to acquire Chilean citizenship or residency.",
+				"Portugal offers citizenship after 5 years. UAE offers permanent residency. Panama offers citizenship after 5 years.",
+		},
+		{
+			question: "Is the investment refundable?",
+			answer:
+				"Real estate investments are property purchases; funds contributions are not refundable.",
 		},
 	];
 

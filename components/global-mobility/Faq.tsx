@@ -17,17 +17,17 @@ const FAQSection = () => {
 		{
 			question: "Do I need to speak Spanish?",
 			answer:
-				"No, Spanish proficiency is not a requirement for birth citizenship or initial residency applications. However, basic Spanish is helpful for daily life, and our concierge team provides full translation support.",
+				"No. We provide full translation and concierge support throughout your stay in Chile.",
 		},
 		{
 			question: "Can I combine birth citizenship with residency?",
 			answer:
-				"Absolutely. Many families apply for residency while awaiting a birth, or use the birth of a Chilean child as a legal pathway to expedite their own permanent residency status.",
+				"Yes. Parents of Chilean-born children qualify for expedited residency under the “Chilean Relative” track.",
 		},
 		{
 			question: "What if I already have a Nigerian passport?",
 			answer:
-				"Both Nigeria and Chile allow dual citizenship. You do not need to renounce your Nigerian passport to acquire Chilean citizenship or residency.",
+				"Chilean citizenship is a second citizenship. Nigeria does not prohibit dual citizenship, so you can hold both passports.",
 		},
 	];
 
