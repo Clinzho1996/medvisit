@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function MedicalConsultation() {
 	return (
-		<section className="mx-auto px-6 py-16 md:px-[9%] lg:py-24 mt-0 sm:mt-10">
+		<section className="mx-auto px-6 pb-16 pt-60 md:px-[9%] lg:py-24 mt-0 sm:mt-10">
 			<div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
 				{/* Left Content Column */}
 				<div className="space-y-6 lg:col-span-6">
