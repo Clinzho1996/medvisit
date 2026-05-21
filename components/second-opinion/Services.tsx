@@ -81,7 +81,7 @@ export default function OurServices() {
 				</p>
 
 				<Link
-					href="#book-consultation"
+					href="/second-opinion/start-consultation"
 					className="inline-block rounded-[4px] border border-[#F39223] bg-white px-6 py-2.5 text-xs sm:text-base font-extrabold text-[#F39223] transition-all duration-200 hover:bg-[#F39223] hover:text-white active:scale-[0.98]">
 					Book Second Opinion Now.
 				</Link>
