@@ -1,11 +1,11 @@
-import ContactHelpSection from "@/components/medical-tourism/Contact";
 import Breadcrumb from "@/components/second-opinion/Breadcrumb";
+import ConsultationPage from "@/components/second-opinion/Consultation";
 
 function Consultation() {
 	return (
 		<div>
 			<Breadcrumb title="Start Consultation" />
-			<ContactHelpSection />
+			<ConsultationPage />
 		</div>
 	);
 }
