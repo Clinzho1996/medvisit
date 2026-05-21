@@ -44,7 +44,7 @@ export default function HeroSection() {
 			</div>
 
 			{/* 3. Bottom Overlapping Info Cards */}
-			<div className="absolute  -bottom-[20] right-0 z-20 w-full px-4 lg:max-w-4xl lg:px-0">
+			<div className="absolute  -bottom-50 sm:-bottom-20 right-0 z-20 w-full px-4 lg:max-w-4xl lg:px-0">
 				<div className="mx-auto grid grid-cols-1 md:grid-cols-2 bg-white shadow-2xl  overflow-hidden">
 					{/* Card 1: Patients & Families */}
 					<div className="relative flex flex-col justify-between border-b border-gray-100 p-8 md:border-b-0 md:border-r border-l-0 sm:border-l-4 border-b-[#F39223] sm:border-l-[#F39223]">
