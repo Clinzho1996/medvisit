@@ -9,7 +9,7 @@ export default function MedicalConsultation() {
 			<div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
 				{/* Left Content Column */}
 				<div className="space-y-6 lg:col-span-6">
-					<h2 className="text-3xl font-extrabold tracking-tighter text-[#0A2540] sm:text-4xl  lg:leading-[1.15]">
+					<h2 className="text-3xl font-extrabold capitalize tracking-tighter text-[#0A2540] sm:text-4xl  lg:leading-[1.15]">
 						International online medical consultation for Nigerians
 					</h2>
 
