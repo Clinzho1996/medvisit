@@ -1,6 +1,8 @@
 "use client";
 
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { SearchResult } from "@/lib/SearchData";
+
 import {
 	IconBrandFacebook,
 	IconBrandInstagram,
@@ -15,12 +17,16 @@ import {
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { useCallback, useEffect, useState } from "react";
 
 const ExpertNavbar = () => {
 	const [isSearchOpen, setIsSearchOpen] = useState(false);
 	const [searchQuery, setSearchQuery] = useState("");
+	const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
+	const [isSearching, setIsSearching] = useState(false);
 	const [isSpecialtiesOpen, setIsSpecialtiesOpen] = useState(false);
+	const router = useRouter();
 
 	const navLinks = [
 		{ name: "Home", href: "/second-opinion" },
@@ -41,11 +47,60 @@ const ExpertNavbar = () => {
 		{ name: "Patients & Families", href: "/second-opinion/patients-families" },
 	];
 
-	const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
+	// Debounced search function
+	const performSearch = useCallback(async (query: string) => {
+		if (!query.trim()) {
+			setSearchResults([]);
+			setIsSearching(false);
+			return;
+		}
+
+		setIsSearching(true);
+		try {
+			const response = await fetch(
+				`/api/search?q=${encodeURIComponent(query)}`,
+			);
+			const data = await response.json();
+			setSearchResults(data);
+		} catch (error) {
+			console.error("Search failed:", error);
+			setSearchResults([]);
+		} finally {
+			setIsSearching(false);
+		}
+	}, []);
+
+	// Debounce effect
+	useEffect(() => {
+		const timer = setTimeout(() => {
+			if (searchQuery) {
+				performSearch(searchQuery);
+			} else {
+				setSearchResults([]);
+			}
+		}, 300);
+
+		return () => clearTimeout(timer);
+	}, [searchQuery, performSearch]);
+
+	const handleSearchSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
-		console.log("Searching for:", searchQuery);
-		// Logic to route: router.push(`/search?q=${searchQuery}`)
+		if (searchQuery.trim() && searchResults.length > 0) {
+			router.push(searchResults[0].href);
+			closeSearch();
+		}
+	};
+
+	const handleResultClick = (href: string) => {
+		router.push(href);
+		closeSearch();
+	};
+
+	const closeSearch = () => {
 		setIsSearchOpen(false);
+		setSearchQuery("");
+		setSearchResults([]);
+		setIsSearching(false);
 	};
 
 	return (
@@ -67,12 +122,10 @@ const ExpertNavbar = () => {
 					</div>
 					<div className="flex items-center gap-3">
 						<Link href="https://www.facebook.com/Medvisitcare/">
-							{" "}
 							<div className="bg-[#05213A] p-1 rounded text-white hover:bg-[#F4911E] cursor-pointer transition-colors">
 								<IconBrandFacebook size={12} />
-							</div>{" "}
+							</div>
 						</Link>
-
 						<Link href="https://twitter.com/Medvisitng">
 							<div className="bg-[#05213A] p-1 rounded text-white hover:bg-[#F4911E] cursor-pointer transition-colors">
 								<IconBrandX size={12} />
@@ -115,24 +168,24 @@ const ExpertNavbar = () => {
 								onMouseLeave={() =>
 									link.isDropdown && setIsSpecialtiesOpen(false)
 								}>
-								<a
+								<Link
 									href={link.href}
 									className="text-[13px] font-bold text-[#05213A] hover:text-[#F4911E] transition-colors flex items-center gap-1">
 									{link.name}
 									{link.isDropdown && <IconChevronDown size={14} />}
-								</a>
+								</Link>
 
 								{/* Dropdown Menu - Added pt-2 to bridge the gap */}
 								{link.isDropdown && isSpecialtiesOpen && (
 									<div className="absolute top-full left-0 pt-2 w-64 z-50">
 										<div className="bg-white shadow-lg rounded-lg border border-gray-100 py-2">
 											{specialtiesDropdownItems.map((item) => (
-												<a
+												<Link
 													key={item.name}
 													href={item.href}
 													className="block px-4 font-bold py-2 text-[13px] text-[#05213A] hover:text-[#F4911E] hover:bg-gray-50 transition-colors">
 													{item.name}
-												</a>
+												</Link>
 											))}
 										</div>
 									</div>
@@ -189,21 +242,21 @@ const ExpertNavbar = () => {
 														</div>
 														<div className="flex flex-col gap-3 pl-4">
 															{specialtiesDropdownItems.map((item) => (
-																<a
+																<Link
 																	key={item.name}
 																	href={item.href}
 																	className="text-base font-medium text-white/80 hover:text-[#F4911E] transition-colors">
 																	{item.name}
-																</a>
+																</Link>
 															))}
 														</div>
 													</>
 												) : (
-													<a
+													<Link
 														href={link.href}
 														className="text-lg font-medium border-b border-white/10 pb-2 block">
 														{link.name}
-													</a>
+													</Link>
 												)}
 											</div>
 										))}
@@ -238,28 +291,81 @@ const ExpertNavbar = () => {
 						animate={{ opacity: 1, y: 0 }}
 						exit={{ opacity: 0, y: -10 }}
 						className="absolute left-0 w-full bg-white shadow-xl z-50 border-b border-gray-200">
-						<form
-							onSubmit={handleSearch}
-							className="max-w-7xl mx-auto px-6 py-6 flex items-center gap-4">
-							<input
-								autoFocus
-								type="text"
-								placeholder="Search services, treatments, or locations..."
-								className="flex-1 bg-gray-50 border-none focus:ring-2 focus:ring-[#F4911E] rounded-lg px-6 py-3 text-[#05213A]"
-								value={searchQuery}
-								onChange={(e) => setSearchQuery(e.target.value)}
-							/>
-							<button
-								type="submit"
-								className="bg-[#05213A] text-white px-4 py-3 rounded-lg font-bold">
-								Search
-							</button>
-							<button
-								onClick={() => setIsSearchOpen(false)}
-								className="text-gray-400">
-								<IconX size={24} />
-							</button>
-						</form>
+						<div className="max-w-7xl mx-auto px-6 py-6">
+							<form
+								onSubmit={handleSearchSubmit}
+								className="flex items-center gap-4">
+								<div className="relative flex-1">
+									<input
+										autoFocus
+										type="text"
+										placeholder="Search services, treatments, or locations..."
+										className="w-full bg-gray-50 border-none focus:ring-2 focus:ring-[#F4911E] rounded-lg px-6 py-3 text-[#05213A]"
+										value={searchQuery}
+										onChange={(e) => setSearchQuery(e.target.value)}
+									/>
+									{isSearching && (
+										<div className="absolute right-3 top-1/2 -translate-y-1/2">
+											<div className="animate-spin rounded-full h-5 w-5 border-b-2 border-[#F4911E]"></div>
+										</div>
+									)}
+								</div>
+								<button
+									type="submit"
+									className="bg-[#05213A] text-white px-4 py-3 rounded-lg font-bold hover:bg-[#0a3558] transition-colors">
+									Search
+								</button>
+								<button
+									onClick={closeSearch}
+									className="text-gray-400 hover:text-gray-600">
+									<IconX size={24} />
+								</button>
+							</form>
+
+							{/* Search Results */}
+							{searchQuery && !isSearching && (
+								<div className="mt-4 border-t border-gray-100 pt-4">
+									{searchResults.length > 0 ? (
+										<>
+											<div className="text-xs text-gray-400 mb-2 px-3">
+												Found {searchResults.length} result
+												{searchResults.length !== 1 ? "s" : ""}
+											</div>
+											{searchResults.map((result, index) => (
+												<button
+													key={index}
+													onClick={() => handleResultClick(result.href)}
+													className="w-full text-left p-3 hover:bg-gray-50 rounded-lg transition-colors group">
+													<div className="flex items-start justify-between">
+														<div className="flex-1">
+															<div className="flex items-center gap-2 mb-1">
+																<span className="text-xs text-[#F4911E] font-semibold">
+																	{result.category}
+																</span>
+															</div>
+															<h4 className="font-bold text-[#05213A] group-hover:text-[#F4911E] transition-colors">
+																{result.title}
+															</h4>
+															<p className="text-sm text-gray-500 mt-1 line-clamp-2">
+																{result.description}
+															</p>
+														</div>
+														<IconSearch
+															size={16}
+															className="text-gray-400 group-hover:text-[#F4911E] ml-4 flex-shrink-0 mt-2"
+														/>
+													</div>
+												</button>
+											))}
+										</>
+									) : (
+										<div className="text-center py-8 text-gray-500">
+											No results found for "{searchQuery}"
+										</div>
+									)}
+								</div>
+							)}
+						</div>
 					</motion.div>
 				)}
 			</AnimatePresence>
