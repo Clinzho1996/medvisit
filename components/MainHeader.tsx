@@ -47,7 +47,7 @@ const Navbar = () => {
 						<div className="flex items-center gap-2">
 							<IconMapPin size={14} className="text-[#F4911E]" />
 							<span className="font-semibold">
-								1 Fawole Lane, Off Ikoroduspand, Obanikoro, Lagos.
+								1A, Johnson Oguntuyo street, Atunrase estate, Gbagada Lagos.
 							</span>
 						</div>
 					</div>
