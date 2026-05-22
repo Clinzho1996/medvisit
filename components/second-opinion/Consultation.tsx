@@ -382,21 +382,21 @@ export default function ConsultationPage() {
 										: "Next"}
 							</button>
 
-							{step === 2 && (
+							{/* {step === 2 && (
 								<button
 									type="button"
 									className="inline-block border-b-2 border-[#F39223] pb-0.5 text-xs font-bold tracking-tight text-[#F39223] transition-colors hover:text-[#d97d1a]">
 									Speak With Counsellor
 								</button>
-							)}
+							)} */}
 
-							{step === 3 && (
+							{/* {step === 3 && (
 								<button
 									type="button"
 									className="inline-block border-b-2 border-[#F39223] pb-0.5 text-xs font-bold tracking-tight text-[#F39223] transition-colors hover:text-[#d97d1a]">
 									Expect Our Call
 								</button>
-							)}
+							)} */}
 						</div>
 					</form>
 				</div>
