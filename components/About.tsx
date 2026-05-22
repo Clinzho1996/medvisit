@@ -46,7 +46,7 @@ const AboutSection = () => {
 				<p className="text-center text-[#F4911E] text-xs font-bold uppercase tracking-widest mb-8">
 					Our Partnership
 				</p>
-				<div className="relative flex overflow-x-hidden  pb-12">
+				<div className="relative flex overflow-x-hidden max-w-7xl mx-auto  pb-12">
 					<motion.div
 						className="flex whitespace-nowrap"
 						animate={{ x: ["0%", "-50%"] }}

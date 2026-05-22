@@ -33,7 +33,7 @@ export default function AbtPhysician() {
 					<div className="relative w-full aspect-[4/3]">
 						{/* The single background image */}
 						<Image
-							src="/abt4.png"
+							src="/abt5.png"
 							alt="Doctor holding stethoscope in clinic hallway"
 							fill
 							priority

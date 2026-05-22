@@ -17,7 +17,7 @@ import {
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 
 const ExpertNavbar = () => {
@@ -27,6 +27,7 @@ const ExpertNavbar = () => {
 	const [isSearching, setIsSearching] = useState(false);
 	const [isSpecialtiesOpen, setIsSpecialtiesOpen] = useState(false);
 	const router = useRouter();
+	const pathname = usePathname();
 
 	const navLinks = [
 		{ name: "Home", href: "/second-opinion" },
@@ -46,6 +47,15 @@ const ExpertNavbar = () => {
 		},
 		{ name: "Patients & Families", href: "/second-opinion/patients-families" },
 	];
+
+	// Helper function to check if a link is active
+	const isLinkActive = (href: string) => {
+		if (href === "#") return false;
+		if (href === "/second-opinion") {
+			return pathname === href;
+		}
+		return pathname === href || pathname.startsWith(`${href}/`);
+	};
 
 	// Debounced search function
 	const performSearch = useCallback(async (query: string) => {
@@ -170,7 +180,11 @@ const ExpertNavbar = () => {
 								}>
 								<Link
 									href={link.href}
-									className="text-[13px] font-bold text-[#05213A] hover:text-[#F4911E] transition-colors flex items-center gap-1">
+									className={`text-[13px] font-bold transition-colors flex items-center gap-1 ${
+										!link.isDropdown && isLinkActive(link.href)
+											? "text-[#F4911E]"
+											: "text-[#05213A] hover:text-[#F4911E]"
+									}`}>
 									{link.name}
 									{link.isDropdown && <IconChevronDown size={14} />}
 								</Link>
@@ -183,7 +197,11 @@ const ExpertNavbar = () => {
 												<Link
 													key={item.name}
 													href={item.href}
-													className="block px-4 font-bold py-2 text-[13px] text-[#05213A] hover:text-[#F4911E] hover:bg-gray-50 transition-colors">
+													className={`block px-4 font-bold py-2 text-[13px] transition-colors ${
+														isLinkActive(item.href)
+															? "text-[#F4911E] bg-gray-50"
+															: "text-[#05213A] hover:text-[#F4911E] hover:bg-gray-50"
+													}`}>
 													{item.name}
 												</Link>
 											))}
@@ -211,14 +229,14 @@ const ExpertNavbar = () => {
 								height={50}
 								className="w-10 h-10"
 							/>
-							<div className="flex flex-col gap-1">
+							<Link href="tel:+2348182522015" className="flex flex-col gap-1">
 								<span className="text-[10px] capitalize font-bold opacity-90">
 									Speak With A Consultant
 								</span>
 								<span className="text-lg font-bold leading-none">
 									+23481 825 22015
 								</span>
-							</div>
+							</Link>
 						</div>
 
 						{/* Mobile Menu Trigger */}
@@ -245,7 +263,11 @@ const ExpertNavbar = () => {
 																<Link
 																	key={item.name}
 																	href={item.href}
-																	className="text-base font-medium text-white/80 hover:text-[#F4911E] transition-colors">
+																	className={`text-base font-medium transition-colors ${
+																		isLinkActive(item.href)
+																			? "text-[#F4911E]"
+																			: "text-white/80 hover:text-[#F4911E]"
+																	}`}>
 																	{item.name}
 																</Link>
 															))}
@@ -254,7 +276,11 @@ const ExpertNavbar = () => {
 												) : (
 													<Link
 														href={link.href}
-														className="text-lg font-medium border-b border-white/10 pb-2 block">
+														className={`text-lg font-medium border-b border-white/10 pb-2 block transition-colors ${
+															isLinkActive(link.href)
+																? "text-[#F4911E]"
+																: "hover:text-[#F4911E]"
+														}`}>
 														{link.name}
 													</Link>
 												)}

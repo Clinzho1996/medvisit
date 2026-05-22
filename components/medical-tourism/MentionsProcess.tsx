@@ -11,11 +11,12 @@ function MentionsProcess() {
 	});
 
 	const partners = [
-		{ id: 1, src: "/l1.png", alt: "ILAC" },
-		{ id: 2, src: "/l2.png", alt: "ANAB" },
-		{ id: 3, src: "/l3.png", alt: "CAP" },
-		{ id: 4, src: "/l4.png", alt: "SGS" },
-		{ id: 5, src: "/l5.png", alt: "ITA" },
+		{ id: 1, src: "/pr1.png", alt: "ILAC" },
+		{ id: 2, src: "/pr2.png", alt: "ANAB" },
+		{ id: 3, src: "/pr3.png", alt: "CAP" },
+		{ id: 4, src: "/pr4.png", alt: "SGS" },
+		{ id: 5, src: "/pr5.png", alt: "ITA" },
+		{ id: 5, src: "/pr6.png", alt: "ITA" },
 	];
 
 	const containerVariants = {
@@ -89,9 +90,9 @@ function MentionsProcess() {
 						<Image
 							src={partner.src}
 							alt={partner.alt}
-							width={250}
+							width={150}
 							height={50}
-							className="object-contain w-20 h-16 sm:w-50 sm:h-12"
+							className="object-contain w-20 h-16 sm:w-40 sm:h-10"
 						/>
 					</motion.div>
 				))}

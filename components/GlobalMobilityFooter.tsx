@@ -15,7 +15,7 @@ const MobilityFooter = () => {
 					initial={{ opacity: 0, y: 20 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true }}
-					className="relative overflow-hidden rounded-3xl main-footer border-[1.33px] border-[#FFFFFF1A] p-8 md:p-16 mb-20 group">
+					className="relative footer-bg overflow-hidden rounded-3xl main-footer border-[1.33px] border-[#FFFFFF1A] p-8 md:p-16 mb-20 group">
 					<div className="relative z-10 max-w-4xl">
 						<h2 className="text-2xl md:text-4xl font-semibold leading-tight tracking-tighter mb-4">
 							Ready to Unlock Global Freedom?

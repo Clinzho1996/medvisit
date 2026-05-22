@@ -61,7 +61,7 @@ const HospitalCard = ({
 
 export default function ExploreHospitalsSection() {
 	// Unique list of tracking regions derived from wireframe filters
-	const tabs = ["ALL", "INDIA", "UAE", "ISREAL", "GERMANY", "EGYPT", "UK"];
+	const tabs = ["ALL", "INDIA", "UAE", "Israel", "GERMANY", "EGYPT", "UK"];
 	const [activeTab, setActiveTab] = useState("ALL");
 
 	// Dataset matrix matching the preview visual index exactly
@@ -98,14 +98,14 @@ export default function ExploreHospitalsSection() {
 		},
 		{
 			name: "Assuta Medical Centre",
-			location: "Isreal",
-			region: "ISREAL",
+			location: "Israel",
+			region: "Israel",
 			imageSrc: "/assuta.png",
 		},
 		{
 			name: "Herzliya Medical Center",
-			location: "Isreal",
-			region: "ISREAL",
+			location: "Israel",
+			region: "Israel",
 			imageSrc: "/herzliya.png",
 		},
 		{

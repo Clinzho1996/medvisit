@@ -2,6 +2,7 @@ import AboutSection from "@/components/About";
 import HeroSection from "@/components/Hero";
 import MedVisitFooter from "@/components/MainFooter";
 import Navbar from "@/components/MainHeader";
+import FAQInner from "@/components/second-opinion/FaqInner";
 import ServicesSection from "@/components/Services";
 import Image from "next/image";
 import "./globals.css";
@@ -22,6 +23,9 @@ function HomePage() {
 				/>
 			</div>
 			<ServicesSection />
+			<div className="mb-20">
+				<FAQInner />
+			</div>
 			<MedVisitFooter />
 		</div>
 	);

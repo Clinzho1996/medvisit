@@ -50,9 +50,7 @@ export default function AboutInner() {
 						className="lg:col-span-6 space-y-5 text-left">
 						<h2 className="text-2xl md:text-5xl font-extrabold text-[#05213A] tracking-tighter leading-[1.2]">
 							Nigeria&apos;s <span className="text-[#F7931E]">First</span> Full
-							Service
-							<br className="hidden md:block" />
-							Medical Tourism Agency
+							Service Medical Tourism Agency
 						</h2>
 						<div className="space-y-4 text-[#000000B2] font-normal text-xs md:text-lg leading-relaxed">
 							<p>

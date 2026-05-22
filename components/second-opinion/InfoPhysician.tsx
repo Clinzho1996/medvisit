@@ -110,7 +110,7 @@ export default function InfoPhysician() {
 
 					<div className="flex flex-col items-center justify-center gap-6 sm:flex-row sm:gap-10">
 						{/* Left Content Label */}
-						<div className="text-center sm:text-right text-xs font-semibold uppercase tracking-wider text-gray-400 sm:max-w-[200px]">
+						<div className="text-center sm:text-right text-xs font-semibold  tracking-wider text-gray-400 sm:max-w-[200px]">
 							Video-consultation & medical report with :
 						</div>
 

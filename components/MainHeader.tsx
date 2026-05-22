@@ -16,7 +16,7 @@ import {
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 
 const Navbar = () => {
@@ -24,6 +24,8 @@ const Navbar = () => {
 	const [searchQuery, setSearchQuery] = useState("");
 	const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
 	const [isSearching, setIsSearching] = useState(false);
+	const pathname = usePathname();
+
 	const router = useRouter();
 
 	const navLinks = [
@@ -144,14 +146,22 @@ const Navbar = () => {
 
 					{/* Desktop Links */}
 					<div className="hidden lg:flex items-center gap-8">
-						{navLinks.map((link) => (
-							<Link
-								key={link.name}
-								href={link.href}
-								className="text-[13px] font-bold text-[#05213A] hover:text-[#F4911E] transition-colors">
-								{link.name}
-							</Link>
-						))}
+						{navLinks.map((link) => {
+							const isActive = pathname === link.href;
+
+							return (
+								<Link
+									key={link.name}
+									href={link.href}
+									className={`text-[13px] font-bold transition-colors ${
+										isActive
+											? "text-[#F4911E]"
+											: "text-[#05213A] hover:text-[#F4911E]"
+									}`}>
+									{link.name}
+								</Link>
+							);
+						})}
 					</div>
 
 					{/* Search & Contact Action */}
@@ -171,14 +181,14 @@ const Navbar = () => {
 								height={50}
 								className="w-10 h-10"
 							/>
-							<div className="flex flex-col gap-1">
+							<Link href="tel:+2348182522015" className="flex flex-col gap-1">
 								<span className="text-[10px] capitalize font-bold opacity-90">
 									Speak With A Consultant
 								</span>
 								<span className="text-lg font-bold leading-none">
 									+23481 825 22015
 								</span>
-							</div>
+							</Link>
 						</div>
 
 						{/* Mobile Menu Trigger */}

@@ -23,14 +23,14 @@ const servicesData: ServiceCard[] = [
 		id: 2,
 		title: "Detailed Medical Report",
 		description:
-			"Receive a detailed medical report about your condition with an accurate diagnosis, the best treatment plan and answers to your questions. Our medical team helps you understand the expert's report",
+			"Receive a detailed medical report about your condition with an accurate diagnosis, the best treatment plan and answers to your questions. Our medical team helps you understand the expert's report.",
 		icon: <Image src="/team.png" alt="Report" width={50} height={50} />,
 	},
 	{
 		id: 3,
 		title: "Travel Abroad For Treatment",
 		description:
-			"Where the required treatment is not available locally in Nigeria, Medvisit enables you to travel abroad to consult the expert or to receive your treatment or operation",
+			"Where the required treatment is not available locally in Nigeria, Medvisit enables you to travel abroad to consult the expert or to receive your treatment or operation.",
 		icon: <Image src="/med.png" alt="Travel" width={50} height={50} />,
 	},
 ];

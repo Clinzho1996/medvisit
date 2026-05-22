@@ -180,7 +180,13 @@ export default function ContactHelpSection() {
 
 							{/* Headset Symbol Vector */}
 							<div className="text-white ">
-								<Image src="/head.png" alt="headset" width={130} height={130} className="w-20 h-20 sm:w-30 sm:h-30 object-contain" />
+								<Image
+									src="/head.png"
+									alt="headset"
+									width={130}
+									height={130}
+									className="w-20 h-20 sm:w-30 sm:h-30 object-contain"
+								/>
 							</div>
 						</div>
 					</div>
@@ -198,7 +204,7 @@ export default function ContactHelpSection() {
 								Nigeria Location
 							</p>
 							<p className="text-xs sm:text-lg text-white tracking-tighter font-bold leading-relaxed">
-								1 Fawole Lane, Off Ikorodu Road, Obanikoro, Lagos
+								1A, Johnson Oguntuyo street, Atunrase estate, Gbagada Lagos.
 							</p>
 						</div>
 
@@ -207,7 +213,7 @@ export default function ContactHelpSection() {
 								India Location
 							</p>
 							<p className="text-xs font-bold sm:text-lg text-white tracking-tighter leading-relaxed">
-								1 Fawole Lane, Off Ikorodu Road, Obanikoro, Lagos
+								S.P. Mukherjee Road, DumDum Cantonment Kolkata – 700028
 							</p>
 						</div>
 					</div>

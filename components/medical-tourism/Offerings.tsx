@@ -97,7 +97,7 @@ export default function UniqueOfferings() {
 									className="flex w-full items-center justify-between px-6 py-4 text-left font-semibold text-sm sm:text-base md:text-lg transition-all rounded-md
                     data-[state=open]:bg-[#F39223] data-[state=open]:text-white data-[state=open]:hover:no-underline
                     data-[state=closed]:bg-[#F8F9FC] data-[state=closed]:text-[#0A2540] data-[state=closed]:hover:bg-[#F1F3F9]
-                    [&[data-state=open]>svg]:rotate-180">
+                    [&[data-state=open]>svg]:text-white [&[data-state=open]>svg]:stroke-white">
 									{item.title}
 								</AccordionTrigger>
 								<AccordionContent className="bg-white px-6 pt-4 pb-6 text-sm leading-relaxed text-gray-600 border-x border-b border-gray-100 rounded-b-md -mt-1 shadow-sm">

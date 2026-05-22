@@ -147,6 +147,13 @@
 		background-position: bottom;
 	}
 
+	.footer-bg {
+		background-image: url("/foot.png");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: bottom;
+	}
+
 	.bread-bg {
 		background-image: url("/bread.png");
 		background-size: cover;

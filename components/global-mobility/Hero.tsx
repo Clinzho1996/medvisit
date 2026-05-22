@@ -43,6 +43,11 @@ function Hero() {
 		tap: { scale: 0.95 },
 	};
 
+	// Floating badge hover animations
+	const badgeHover = {
+		hover: { scale: 1.05, y: -2, transition: { duration: 0.2 } },
+	};
+
 	return (
 		<div className="px-[4%] sm:px-[8%] py-5 bg-white overflow-hidden">
 			<motion.div
@@ -50,8 +55,8 @@ function Hero() {
 				whileInView="visible"
 				viewport={{ once: true, amount: 0.2 }}
 				variants={containerVariants}
-				className="flex flex-col lg:flex-row items-stretch gap-10 bg-[#D7DAEE] rounded-3xl p-3 md:p-4 mb-20">
-				<div className="flex-1 py-6 px-3">
+				className="flex flex-col lg:flex-row gap-0 bg-[#D7DAEE] rounded-3xl p-3 md:p-4 mb-20">
+				<div className="flex-1 py-6 px-3 w-full lg:w-[40%]">
 					<motion.h1
 						variants={itemVariants}
 						className="text-[#05213A] text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4">
@@ -117,29 +122,89 @@ function Hero() {
 					</motion.div>
 				</div>
 
+				{/* Desktop View with Floating Badges */}
 				<motion.div
 					variants={imageVariants}
-					className="hidden sm:flex flex-1  items-stretch">
-					<div className="relative w-full h-full min-h-[250px] lg:min-h-full">
+					className="hidden sm:flex flex-1 lg:w-[55%] relative">
+					<div className="relative w-full h-full min-h-[250px] lg:min-h-[450px]">
 						<Image
-							src="/global-mobility.png"
+							src="/Hero-Banner.png"
 							alt="Global Mobility"
 							fill
-							className="object-contain rounded-2xl lg:rounded-r-3xl lg:rounded-l-none"
-							sizes="(max-width: 768px) 70vw, (max-width: 1200px) 70vw, 53vw"
+							className="object-cover rounded-2xl lg:rounded-r-3xl lg:rounded-l-none"
 							priority
 						/>
+
+						{/* Chile Badge */}
+						<motion.div
+							variants={badgeHover}
+							whileHover="hover"
+							className="absolute top-[15%] left-[-4%] bg-white rounded-full px-4 py-2 shadow-md flex items-center gap-2 text-xs font-semibold text-[#05213A]">
+							<span className="text-base">🇨🇱</span> Chile
+						</motion.div>
+
+						{/* Portugal Badge */}
+						<motion.div
+							variants={badgeHover}
+							whileHover="hover"
+							className="absolute top-[-2%] right-[1%] bg-white rounded-full px-4 py-2 shadow-md flex items-center gap-2 text-xs font-semibold text-[#05213A]">
+							<span className="text-base">🇵🇹</span> Portugal
+						</motion.div>
+
+						{/* Mexico Badge */}
+						<motion.div
+							variants={badgeHover}
+							whileHover="hover"
+							className="absolute bottom-[35%] right-[-2%] bg-white rounded-full px-4 py-2 shadow-md flex items-center gap-2 text-xs font-semibold text-[#05213A]">
+							<span className="text-base">🇲🇽</span> Mexico
+						</motion.div>
+
+						{/* Success Counter Badge */}
+						<motion.div
+							variants={badgeHover}
+							whileHover="hover"
+							className="absolute bottom-[5%] left-[-4%] bg-white rounded-full p-2 pr-6 shadow-lg flex items-center gap-3">
+							<div className="flex -space-x-2 overflow-hidden">
+								<div className="inline-block h-8 w-8 rounded-full ring-2 ring-white bg-gray-200 relative overflow-hidden">
+									<Image
+										src="/user1.png"
+										alt="User"
+										fill
+										className="object-cover"
+									/>
+								</div>
+								<div className="inline-block h-8 w-8 rounded-full ring-2 ring-white bg-gray-300 relative overflow-hidden">
+									<Image
+										src="/user2.png"
+										alt="User"
+										fill
+										className="object-cover"
+									/>
+								</div>
+								<div className="inline-block h-8 w-8 rounded-full ring-2 ring-white bg-gray-400 relative overflow-hidden">
+									<Image
+										src="/user3.png"
+										alt="User"
+										fill
+										className="object-cover"
+									/>
+								</div>
+							</div>
+							<p className="text-xs font-bold text-[#05213A] whitespace-nowrap">
+								1300+ people start new lives
+							</p>
+						</motion.div>
 					</div>
 				</motion.div>
 
+				{/* Mobile View */}
 				<motion.div variants={imageVariants} className="block sm:hidden flex-1">
-					<div className="relative w-full h-full ">
+					<div className="relative rounded-lg w-full h-full">
 						<Image
 							src="/mobg.png"
 							alt="Global Mobility"
-							height={430}
-							width={300}
-							className="object-contain w-full"
+							fill
+							className="object-cover w-full rounded-lg"
 						/>
 					</div>
 				</motion.div>
