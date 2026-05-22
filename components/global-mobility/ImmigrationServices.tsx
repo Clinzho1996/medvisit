@@ -10,7 +10,7 @@ const ImmigrationServices = () => {
 			title: "Chilean Birth Citizenship",
 			price: "From $22,000 Total Family Cost",
 			link: "/global-mobility/birth-citizenship",
-			priceColor: "bg-blue-600",
+			priceColor: "bg-[#5266D1]",
 			bgColor: "birth-bg",
 			description:
 				"Your child receives one of the world's most powerful passports, ranked #14 globally and simply by being born in Chile. No investment requirement. No language test. No minimum stay beyond 2 months.",
@@ -24,7 +24,7 @@ const ImmigrationServices = () => {
 			title: "Chilean Residency",
 			price: "From $2,750 + Fees",
 			link: "/global-mobility/residency",
-			priceColor: "bg-slate-700",
+			priceColor: "bg-[#05213A]",
 			bgColor: "reside-bg",
 			description:
 				'Live, work, and build a future in one of South America\'s most stable economies. Parents of Chilean-born children qualify for expedited residency under the "Chilean Relative" track.',
@@ -38,7 +38,7 @@ const ImmigrationServices = () => {
 			title: "Citizenship by Investment (CBI)",
 			price: "From $90,000 Investment",
 			link: "/global-mobility/citizenship-by-investment",
-			priceColor: "bg-orange-600",
+			priceColor: "bg-[#ED681F]",
 			bgColor: "cbi-bg",
 			description:
 				"Acquire a second passport through qualified investment programs across several countries, including Caribbean CBI.",
@@ -52,7 +52,7 @@ const ImmigrationServices = () => {
 			title: "Golden Visas & Residency Programs",
 			price: "From $250,000 Investment",
 			link: "/global-mobility/compare-plans",
-			priceColor: "bg-emerald-600",
+			priceColor: "bg-[#7BC8A4]",
 			bgColor: "visa-bg",
 			description:
 				"Secure long-term residency in Europe, UAE, or the Americas with a clear path to citizenship. Perfect for families seeking education access, business expansion, or a safe haven.",
