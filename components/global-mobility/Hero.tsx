@@ -131,7 +131,7 @@ function Hero() {
 							src="/Hero-Banner.png"
 							alt="Global Mobility"
 							fill
-							className="object-cover rounded-2xl lg:rounded-r-3xl lg:rounded-l-none"
+							className="object-cover rounded-2xl lg:rounded-3xl lg:rounded-l-3xl"
 							priority
 						/>
 
@@ -155,7 +155,7 @@ function Hero() {
 						<motion.div
 							variants={badgeHover}
 							whileHover="hover"
-							className="absolute bottom-[35%] right-[-2%] bg-white rounded-full px-4 py-2 shadow-md flex items-center gap-2 text-xs font-semibold text-[#05213A]">
+							className="absolute bottom-[35%] right-[-1%] bg-white rounded-full px-4 py-2 shadow-md flex items-center gap-2 text-xs font-semibold text-[#05213A]">
 							<span className="text-base">🇲🇽</span> Mexico
 						</motion.div>
 
@@ -199,12 +199,13 @@ function Hero() {
 
 				{/* Mobile View */}
 				<motion.div variants={imageVariants} className="block sm:hidden flex-1">
-					<div className="relative rounded-lg w-full h-full">
+					<div className="relative w-full h-full">
 						<Image
 							src="/mobg.png"
 							alt="Global Mobility"
-							fill
-							className="object-cover w-full rounded-lg"
+							height={430}
+							width={300}
+							className="object-contain w-full"
 						/>
 					</div>
 				</motion.div>
