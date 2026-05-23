@@ -51,7 +51,7 @@ const ImmigrationServices = () => {
 		{
 			title: "Golden Visas & Residency Programs",
 			price: "From $250,000 Investment",
-			link: "/global-mobility/compare-plans",
+			link: "/global-mobility/golden-visas",
 			priceColor: "bg-[#7BC8A4]",
 			bgColor: "visa-bg",
 			description:
@@ -123,6 +123,7 @@ const ImmigrationServices = () => {
 	return (
 		<motion.section
 			initial="hidden"
+			id="immigration-services"
 			whileInView="visible"
 			viewport={{ once: true, amount: 0.2 }}
 			variants={containerVariants}

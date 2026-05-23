@@ -1,9 +1,11 @@
 "use client";
 
 import {
-	IconBellRinging,
+	IconBriefcase,
 	IconCaretRightFilled,
-	IconHeart,
+	IconPlane,
+	IconSchool,
+	IconShieldCheck,
 	IconUsers,
 } from "@tabler/icons-react";
 import { motion } from "framer-motion";
@@ -11,48 +13,46 @@ import { motion } from "framer-motion";
 const GloWhy = () => {
 	const features = [
 		{
-			title: "Trusted Partnerships",
+			title: "Family Inclusion",
 			icon: <IconUsers className="text-[#F4911E] shrink-0" size={24} />,
-			description:
-				"Authorized partner for Chile Kids — 8+ years experience, 200+ families assisted. We don't just resell services; we are your direct connection and boots on the ground in Chile.",
+			description: "Spouses, children, and sometimes parents included",
 		},
 		{
-			title: "End-to-End Concierge",
-			icon: <IconBellRinging className="text-[#F4911E] shrink-0" size={24} />,
-			description:
-				"Transparent fee structures. No hidden charges. See exactly what you pay before you commit.",
-			isList: true,
-			listItems: [
-				"Visa support",
-				"Medical coordination",
-				"Flights and accommodation",
-				"Translation services",
-				"Airport transfers",
-				"Document delivery",
-			],
+			title: "Education",
+			icon: <IconSchool className="text-[#F4911E] shrink-0" size={24} />,
+			description: "Access international schools and universities",
 		},
 		{
-			title: "Nigerian-Focused Support",
-			icon: <IconHeart className="text-[#F4911E] shrink-0" size={24} />,
-			description:
-				"We understand Nigerian clients' needs. Our team speaks your language, understands your concerns, and provides guidance every step of the way.",
+			title: "No Minimum Stay",
+			icon: <IconPlane className="text-[#F4911E] shrink-0" size={24} />,
+			description: "Some programs require no physical presence",
+		},
+		{
+			title: "Path to Citizenship",
+			icon: <IconShieldCheck className="text-[#F4911E] shrink-0" size={24} />,
+			description: "Clear path to second passport after qualifying period",
+		},
+		{
+			title: "Business Access",
+			icon: <IconBriefcase className="text-[#F4911E] shrink-0" size={24} />,
+			description: "Open businesses, bank accounts, invest locally",
 		},
 	];
 
 	return (
 		<section className="flex flex-col lg:flex-row min-h-[700px] w-full overflow-hidden mt-6">
 			{/* Left Content Column */}
-			<div className="w-full lg:w-[45%] bg-[#051C2C] p-12 md:p-20 flex flex-col justify-center">
+			<div className="w-full lg:w-[50%] bg-[#0A1E33] p-12 md:p-20 flex flex-col justify-center">
 				<motion.div
 					initial={{ opacity: 0, x: -30 }}
 					whileInView={{ opacity: 1, x: 0 }}
 					viewport={{ once: true }}
 					transition={{ duration: 0.6 }}>
-					<h2 className="text-3xl sm:text-4xl font-bold text-white mb-12">
-						The Medvisit Difference
+					<h2 className="text-4xl sm:text-5xl font-bold text-white mb-16 tracking-tight">
+						Why Golden Visas?
 					</h2>
 
-					<div className="space-y-12 mb-12">
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-12 mb-16">
 						{features.map((item, index) => (
 							<motion.div
 								key={index}
@@ -60,53 +60,36 @@ const GloWhy = () => {
 								whileInView={{ opacity: 1, y: 0 }}
 								viewport={{ once: true }}
 								transition={{ delay: index * 0.1 }}
-								className="flex gap-5">
+								className="flex gap-4 items-start">
 								{item.icon}
 								<div className="flex-1">
-									<h4 className="text-white font-bold text-xl mb-2">
+									<h4 className="text-white font-bold text-xl mb-2 tracking-tight">
 										{item.title}
 									</h4>
-									<p className="text-gray-300 text-sm leading-relaxed mb-4 max-w-lg">
+									<p className="text-gray-300 text-sm leading-snug">
 										{item.description}
 									</p>
-
-									{item.isList && (
-										<div className="grid grid-cols-2 gap-y-2 max-w-md">
-											{item.listItems?.map((li, i) => (
-												<div key={i} className="flex items-center gap-2">
-													<span className="text-[#F4911E] text-[10px]">✓</span>
-													<span className="text-gray-300 text-xs">{li}</span>
-												</div>
-											))}
-										</div>
-									)}
 								</div>
 							</motion.div>
 						))}
 					</div>
 
-					<div className="flex flex-wrap gap-4">
+					<div className="flex">
 						<motion.button
 							whileHover={{ scale: 1.05 }}
 							whileTap={{ scale: 0.95 }}
-							className="flex items-center gap-2 bg-[#F4911E] text-white px-7 py-3.5 rounded-lg text-xs font-bold shadow-[#F7931E40] shadow-xl transition-all">
+							className="flex items-center gap-2 bg-[#F4911E] text-white px-8 py-4 rounded-xl text-md font-semibold shadow-[#F4911E30] shadow-2xl hover:bg-[#e08113] transition-all">
 							Book Free Consultation
-							<IconCaretRightFilled size={16} />
-						</motion.button>
-						<motion.button
-							whileHover={{ scale: 1.05 }}
-							whileTap={{ scale: 0.95 }}
-							className="px-7 py-3.5 border border-white/30 text-white text-xs font-bold rounded-lg hover:bg-white/10 transition-colors">
-							Talk to an Expert
+							<IconCaretRightFilled size={18} />
 						</motion.button>
 					</div>
 				</motion.div>
 			</div>
 
 			{/* Right Image Column */}
-			<div className="w-full lg:w-[55%] relative min-h-[500px] lg:min-h-full">
+			<div className="w-full lg:w-[50%] relative min-h-[500px] lg:min-h-full">
 				<img
-					src="/bcwhy.png" // Ensure this matches your local asset path
+					src="/glo.png" // Ensure this matches your local asset path
 					alt="Happy Nigerian couple traveling"
 					className="absolute inset-0 w-full h-full object-cover"
 				/>

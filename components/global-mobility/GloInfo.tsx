@@ -155,7 +155,9 @@ const FeaturedPrograms = () => {
 	];
 
 	return (
-		<div className="w-full faq-bg py-24 px-6 md:px-[5%] relative overflow-hidden bg-[#FDFDFD]">
+		<div
+			id="golden-visa-option"
+			className="w-full faq-bg py-24 px-6 md:px-[5%] relative overflow-hidden bg-[#FDFDFD]">
 			<div className="text-center mb-16 relative z-10">
 				<h2 className="text-4xl font-bold text-[#05213A] tracking-tighter mb-4">
 					Golden Visa Programs

@@ -95,7 +95,7 @@ const StepProcess = () => {
 			],
 		},
 		{
-			title: "Permanent Residence",
+			title: "Permanent<br />Residence",
 			subtitle: "For Those Already in Chile on Temporary Status",
 			processing: "1-2 years",
 			benefits:
@@ -127,9 +127,10 @@ const StepProcess = () => {
 							key={idx}
 							whileHover={{ y: -5 }}
 							className="bg-white rounded-2xl p-8 border border-[#00000014]  flex flex-col">
-							<h3 className="text-xl sm:text-3xl tracking-tighter font-bold text-[#05213A] leading-tight mb-2">
-								{track.title}
-							</h3>
+							<h3
+								className="text-xl sm:text-3xl tracking-tighter font-bold text-[#05213A] leading-tight mb-2"
+								dangerouslySetInnerHTML={{ __html: track.title }}
+							/>
 							<p className="text-[#F4911E] text-[11px] font-bold tracking-wide mb-6">
 								{track.subtitle}
 							</p>

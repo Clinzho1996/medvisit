@@ -2,6 +2,7 @@
 import { IconCaretRightFilled } from "@tabler/icons-react";
 import { motion, Variants } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 function Hero() {
 	// Animation variants
@@ -76,14 +77,16 @@ function Hero() {
 					<motion.div
 						variants={itemVariants}
 						className="flex flex-row justify-start items-center gap-5 mt-6">
-						<motion.button
-							variants={buttonVariants}
-							whileHover="hover"
-							whileTap="tap"
-							className="flex items-center gap-2 bg-[#F4911E] text-white px-6 py-3 rounded-lg text-sm font-bold shadow-[#F7931E70] shadow-lg">
-							Explore your Options
-							<IconCaretRightFilled size={18} stroke={3} />
-						</motion.button>
+						<Link href="/global-mobility/#immigration-services">
+							<motion.button
+								variants={buttonVariants}
+								whileHover="hover"
+								whileTap="tap"
+								className="flex items-center cursor-pointer gap-2 bg-[#F4911E] text-white px-6 py-3 rounded-lg text-sm font-bold shadow-[#F7931E70] shadow-lg">
+								Explore your Options
+								<IconCaretRightFilled size={18} stroke={3} />
+							</motion.button>
+						</Link>
 						<motion.button
 							variants={buttonVariants}
 							whileHover="hover"

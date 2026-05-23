@@ -15,7 +15,7 @@ function GoldenVisas() {
 					buttonText="Explore Golden Visa Options"
 					bgColor="bg-[#DDECE5]"
 					img="/gold.png"
-					link="/"
+					link="/global-mobility/golden-visas/#golden-visa-option"
 					isCentered={true}
 				/>
 			</div>

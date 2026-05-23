@@ -151,7 +151,7 @@
 		background-image: url("/foot.png");
 		background-repeat: no-repeat;
 		background-size: cover;
-		background-position: bottom;
+		background-position: top;
 	}
 
 	.bread-bg {
