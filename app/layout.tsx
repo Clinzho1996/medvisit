@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Nunito_Sans } from "next/font/google";
+import { Toaster } from "sonner";
 import "./globals.css";
 
 const nunitoSans = Nunito_Sans({
@@ -22,7 +23,10 @@ export default function RootLayout({
 		<html
 			lang="en"
 			className={cn("h-full", "antialiased", nunitoSans.variable)}>
-			<body className={cn("min-h-full flex flex-col")}>{children}</body>
+			<body className={cn("min-h-full flex flex-col")}>
+				<Toaster position="top-right" />
+				{children}
+			</body>
 		</html>
 	);
 }

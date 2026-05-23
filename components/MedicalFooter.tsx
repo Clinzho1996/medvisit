@@ -6,24 +6,79 @@ import {
 	IconBrandX,
 } from "@tabler/icons-react";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+
+interface Category {
+	id: string;
+	name: string;
+	created_at: string;
+	updated_at: string;
+}
+
+interface BlogPost {
+	id: string;
+	title: string;
+	slug: string;
+	category_id: string;
+	meta: {
+		name: string;
+		desc: string;
+	};
+	content: string;
+	status: string;
+	image: string;
+	image_alt: string | null;
+	created_at: string;
+	updated_at: string;
+	category: Category;
+}
+
+interface ApiResponse {
+	status: string;
+	message: string;
+	data: BlogPost[];
+	pagination: {
+		prev_page_url: string | null;
+		next_page_url: string | null;
+		current_page: number;
+		total: number;
+	};
+}
 
 export default function MedicalVisitFooter() {
 	const currentYear = new Date().getFullYear();
+	const [latestPosts, setLatestPosts] = useState<BlogPost[]>([]);
+	const [isLoading, setIsLoading] = useState(true);
 
-	// Animation variants
-	const fadeIn = {
-		hidden: { opacity: 0, y: 20 },
-		visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-	};
+	useEffect(() => {
+		const fetchLatestPosts = async () => {
+			try {
+				const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/post`);
+				const data: ApiResponse = await response.json();
 
-	const staggerContainer = {
-		hidden: { opacity: 0 },
-		visible: {
-			opacity: 1,
-			transition: {
-				staggerChildren: 0.1,
-			},
-		},
+				if (data.status === "success") {
+					// Get the latest 3 posts (sort by created_at descending)
+					const sorted = [...data.data].sort(
+						(a, b) =>
+							new Date(b.created_at).getTime() -
+							new Date(a.created_at).getTime(),
+					);
+					setLatestPosts(sorted.slice(0, 3));
+				}
+			} catch (error) {
+				console.error("Error fetching latest posts:", error);
+			} finally {
+				setIsLoading(false);
+			}
+		};
+
+		fetchLatestPosts();
+	}, []);
+
+	// Truncate text to a certain length
+	const truncateText = (text: string, maxLength: number) => {
+		if (text.length <= maxLength) return text;
+		return text.substring(0, maxLength) + "...";
 	};
 
 	return (
@@ -45,10 +100,9 @@ export default function MedicalVisitFooter() {
 						<span className="text-[#002B3B] font-bold">Follow us:</span>
 						<div className="flex items-center gap-3">
 							<Link href="https://www.facebook.com/Medvisitcare/">
-								{" "}
 								<div className="bg-[#002B3B] p-1 rounded text-white hover:bg-[#F4911E] cursor-pointer transition-colors">
 									<IconBrandFacebook color="#fff" size={12} />
-								</div>{" "}
+								</div>
 							</Link>
 
 							<Link href="https://twitter.com/Medvisitng">
@@ -70,19 +124,27 @@ export default function MedicalVisitFooter() {
 					<h3 className="text-[#002B3B] font-bold tracking-wider uppercase">
 						Latest Blog
 					</h3>
-					<ul className="space-y-4 text-lg text-[#000000B2]">
-						<li className="hover:text-[#F4911E] cursor-pointer transition-colors">
-							COVID-19 Guidelines for International Patients Arriving in India
-							For Medical Treatment
-						</li>
-						<li className="hover:text-[#F4911E] cursor-pointer transition-colors">
-							Travelling to India for Eye Surgery (2020 Update)
-						</li>
-						<li className="hover:text-[#F4911E] cursor-pointer transition-colors">
-							How much Does a Standard Medical Checkup Cost in Checkup Cost in
-							India, Dubai, and Israel
-						</li>
-					</ul>
+					{isLoading ? (
+						<div className="space-y-4">
+							<div className="h-5 bg-gray-200 rounded animate-pulse"></div>
+							<div className="h-5 bg-gray-200 rounded animate-pulse w-3/4"></div>
+							<div className="h-5 bg-gray-200 rounded animate-pulse w-5/6"></div>
+						</div>
+					) : latestPosts.length > 0 ? (
+						<ul className="space-y-4 text-lg text-[#000000B2]">
+							{latestPosts.map((post) => (
+								<li key={post.id}>
+									<Link
+										href={`/medical-tourism/blog/${post.slug}`}
+										className="hover:text-[#F4911E] cursor-pointer transition-colors block">
+										{truncateText(post.title, 80)}
+									</Link>
+								</li>
+							))}
+						</ul>
+					) : (
+						<p className="text-[#000000B2] text-lg">No blog posts available</p>
+					)}
 				</div>
 
 				{/* Get In Touch */}

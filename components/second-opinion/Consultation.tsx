@@ -2,6 +2,7 @@
 
 import { ArrowLeft, ChevronDown } from "lucide-react";
 import React, { useState } from "react";
+import { toast } from "sonner";
 
 interface FormData {
 	fullName: string;
@@ -54,6 +55,7 @@ const NIGERIAN_STATES = [
 
 export default function ConsultationPage() {
 	const [step, setStep] = useState<1 | 2 | 3>(1);
+	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [formData, setFormData] = useState<FormData>({
 		fullName: "",
 		phoneNumber: "",
@@ -89,12 +91,72 @@ export default function ConsultationPage() {
 		setFormData((prev) => ({ ...prev, [name]: value }));
 	};
 
-	const handleNextStep = (e: React.FormEvent) => {
+	const handleSubmitForm = async () => {
+		setIsSubmitting(true);
+
+		try {
+			const response = await fetch(
+				`${process.env.NEXT_PUBLIC_API_URL}/consultation`,
+				{
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json",
+					},
+					body: JSON.stringify({
+						name: formData.fullName,
+						phone: formData.phoneNumber,
+						location: formData.location,
+						specialist: formData.specialist,
+						preferred_country_of_expert: formData.preferredCountry,
+						post_consultation: formData.postConsultation.toLowerCase(),
+						cost: parseFloat(fees.total),
+					}),
+				},
+			);
+
+			if (response.ok) {
+				toast.success("Consultation booked successfully!", {
+					description: `Total cost: $${fees.total}. You will be redirected to payment.`,
+					duration: 5000,
+				});
+				// Reset form after successful submission
+				setFormData({
+					fullName: "",
+					phoneNumber: "",
+					location: "",
+					specialist: "",
+					preferredCountry: "USA",
+					postConsultation: "Yes",
+				});
+				setStep(1);
+				// You can redirect to payment page here if needed
+				// router.push("/payment");
+			} else {
+				const errorData = await response.json();
+				toast.error("Failed to book consultation", {
+					description: errorData.message || "Please try again later.",
+					duration: 5000,
+				});
+			}
+		} catch (error) {
+			console.error("Error submitting form:", error);
+			toast.error("Network error", {
+				description: "Please check your connection and try again.",
+				duration: 5000,
+			});
+		} finally {
+			setIsSubmitting(false);
+		}
+	};
+
+	const handleNextStep = async (e: React.FormEvent) => {
 		e.preventDefault();
-		if (step < 3) {
+
+		if (step === 3) {
+			// Submit the form on the last step
+			await handleSubmitForm();
+		} else if (step < 3) {
 			setStep((prev) => (prev + 1) as 1 | 2 | 3);
-		} else {
-			alert("Processing payment infrastructure transaction...");
 		}
 	};
 
@@ -103,7 +165,7 @@ export default function ConsultationPage() {
 	};
 
 	return (
-		<div className="w-full min-h-screen  py-16 px-[9%] flex items-center justify-center">
+		<div className="w-full min-h-screen py-16 px-[9%] flex items-center justify-center">
 			<main className="w-full max-w-4xl mx-auto">
 				{/* --- Form Container Card --- */}
 				<div className="w-full bg-white rounded-3xl shadow-2xl overflow-hidden transition-all duration-300">
@@ -374,29 +436,16 @@ export default function ConsultationPage() {
 						<div className="mt-10 space-y-4 text-center">
 							<button
 								type="submit"
-								className="w-full rounded-xl bg-[#F39223] py-4 text-sm font-bold text-white transition-all hover:bg-[#d97d1a] active:scale-[0.99] shadow-md">
-								{step === 3
-									? "Make Payment"
-									: step === 2
-										? "Proceed To Checkout"
-										: "Next"}
+								disabled={isSubmitting}
+								className="w-full rounded-xl bg-[#F39223] py-4 text-sm font-bold text-white transition-all hover:bg-[#d97d1a] active:scale-[0.99] shadow-md disabled:opacity-50 disabled:cursor-not-allowed">
+								{isSubmitting
+									? "Processing..."
+									: step === 3
+										? "Submit & Expect Our Call"
+										: step === 2
+											? "Preview"
+											: "Next"}
 							</button>
-
-							{/* {step === 2 && (
-								<button
-									type="button"
-									className="inline-block border-b-2 border-[#F39223] pb-0.5 text-xs font-bold tracking-tight text-[#F39223] transition-colors hover:text-[#d97d1a]">
-									Speak With Counsellor
-								</button>
-							)} */}
-
-							{/* {step === 3 && (
-								<button
-									type="button"
-									className="inline-block border-b-2 border-[#F39223] pb-0.5 text-xs font-bold tracking-tight text-[#F39223] transition-colors hover:text-[#d97d1a]">
-									Expect Our Call
-								</button>
-							)} */}
 						</div>
 					</form>
 				</div>
