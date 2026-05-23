@@ -27,7 +27,7 @@ const ServiceBlock = ({
 }: ServiceProps) => {
 	return (
 		<div
-			className={`flex flex-col ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"} items-center gap-12 lg:gap-20 py-16`}>
+			className={`flex flex-col ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"} items-center gap-12 lg:gap-20 py-8 sm:py-16`}>
 			{/* Text Content */}
 			<motion.div
 				initial={{ opacity: 0, x: reverse ? 50 : -50 }}
