@@ -1,6 +1,7 @@
 "use client";
 import { IconCaretRightFilled, IconCircleCheck } from "@tabler/icons-react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const GlobalMobilityUI = () => {
 	const categories = [
@@ -52,10 +53,12 @@ const GlobalMobilityUI = () => {
 							Strategic solutions to protect your wealth and expand your
 							family&apos;s horizons in an unpredictable world.
 						</h1>
-						<button className="flex items-center gap-2 px-6 py-3 bg-[#F4911E] text-white rounded-lg font-medium shadow-lg shadow-orange-200 hover:shadow-orange-300 transition-all active:scale-95">
-							Book Free Consultation
-							<IconCaretRightFilled size={18} stroke={3} />
-						</button>
+						<Link href="/second-opinion/contact-us">
+							<button className="flex items-center gap-2 px-6 py-3 bg-[#F4911E] text-white rounded-lg font-medium shadow-lg shadow-orange-200 hover:shadow-orange-300 transition-all active:scale-95">
+								Book Free Consultation
+								<IconCaretRightFilled size={18} stroke={3} />
+							</button>{" "}
+						</Link>
 					</motion.div>
 
 					{/* Hero Image - Plane Concept */}
