@@ -27,7 +27,7 @@ export const searchableContent: SearchResult[] = [
 	{
 		title: "Why Choose Medvisit",
 		description: "Benefits of choosing Medvisit for your medical travel needs",
-		href: "/medical-tourism/why-choose-us",
+		href: "/medical-tourism/about-us",
 		category: "Medical Tourism",
 		keywords: ["benefits", "advantages", "why us", "reasons"],
 	},
@@ -35,7 +35,7 @@ export const searchableContent: SearchResult[] = [
 		title: "Treatments & Procedures",
 		description:
 			"Advanced medical treatments including cardiology, oncology, orthopedics",
-		href: "/medical-tourism/treatments",
+		href: "/medical-tourism/process",
 		category: "Medical Tourism",
 		keywords: ["cardiology", "oncology", "orthopedics", "surgery", "procedure"],
 	},
