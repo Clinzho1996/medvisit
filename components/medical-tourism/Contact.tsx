@@ -2,19 +2,76 @@
 
 import { motion, Variants } from "framer-motion";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
 export default function ContactHelpSection() {
+	const router = useRouter();
 	const [formData, setFormData] = useState({
 		name: "",
 		email: "",
 		phone: "",
 		message: "",
 	});
+	const [isSubmitting, setIsSubmitting] = useState(false);
+	const [submitStatus, setSubmitStatus] = useState<{
+		type: "success" | "error" | null;
+		message: string;
+	}>({ type: null, message: "" });
 
-	const handleSubmit = (e: React.FormEvent) => {
+	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault();
-		console.log("Contact Message Submitted:", formData);
+		setIsSubmitting(true);
+		setSubmitStatus({ type: null, message: "" });
+
+		try {
+			const response = await fetch(
+				`${process.env.NEXT_PUBLIC_API_URL}/contact`,
+				{
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json",
+					},
+					body: JSON.stringify({
+						name: formData.name,
+						email: formData.email,
+						phone: formData.phone,
+						body: formData.message,
+					}),
+				},
+			);
+
+			if (response.ok) {
+				setSubmitStatus({
+					type: "success",
+					message: "Message sent successfully! We'll get back to you soon.",
+				});
+
+				router.push("/medical-tourism/success");
+				// Reset form on success
+				setFormData({
+					name: "",
+					email: "",
+					phone: "",
+					message: "",
+				});
+			} else {
+				const errorData = await response.json();
+				setSubmitStatus({
+					type: "error",
+					message:
+						errorData.message || "Failed to send message. Please try again.",
+				});
+			}
+		} catch (error) {
+			console.error("Error submitting form:", error);
+			setSubmitStatus({
+				type: "error",
+				message: "Network error. Please check your connection and try again.",
+			});
+		} finally {
+			setIsSubmitting(false);
+		}
 	};
 
 	// Entry animations
@@ -50,6 +107,20 @@ export default function ContactHelpSection() {
 							Fill in the form below
 						</p>
 					</div>
+
+					{/* Status Message */}
+					{submitStatus.type && (
+						<motion.div
+							initial={{ opacity: 0, y: -10 }}
+							animate={{ opacity: 1, y: 0 }}
+							className={`p-3 rounded-lg ${
+								submitStatus.type === "success"
+									? "bg-green-50 text-green-800 border border-green-200"
+									: "bg-red-50 text-red-800 border border-red-200"
+							}`}>
+							{submitStatus.message}
+						</motion.div>
+					)}
 
 					<form onSubmit={handleSubmit} className="space-y-4">
 						{/* Name Input */}
@@ -138,8 +209,9 @@ export default function ContactHelpSection() {
 								whileHover={{ scale: 1.02, backgroundColor: "#e27222" }}
 								whileTap={{ scale: 0.98 }}
 								type="submit"
-								className="bg-[#F7931E] text-white font-semibold sm:text-lg text-xs px-6 py-3 rounded-lg shadow-md transition-colors duration-200">
-								Send Your Message
+								disabled={isSubmitting}
+								className="bg-[#F7931E] text-white font-semibold sm:text-lg text-xs px-6 py-3 rounded-lg shadow-md transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed">
+								{isSubmitting ? "Sending..." : "Send Your Message"}
 							</motion.button>
 						</motion.div>
 					</form>

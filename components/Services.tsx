@@ -158,11 +158,15 @@ const ServicesSection = () => {
 				},
 				{
 					title: "Chilean Residency",
-					desc: "Live, work, and build a future in one of South America's most stable economies.",
+					desc: "Live, work, and build a future in one of South America's most stable economies. Parents of Chilean-born children qualify for expedited residency under the 'Chilean Relative' track.",
 				},
 				{
 					title: "Citizenship by Investment (CBI)",
-					desc: "Acquire a second passport through qualified investment programs across several countries.",
+					desc: "Acquire a second passport through qualified investment programs across several countries, including Caribbean CBI",
+				},
+				{
+					title: "CitGolden Visas & Residency Programs",
+					desc: "Secure residency in Europe, UAE, or the Americas with a path to citizenship. Ideal for families seeking education, business growth, or safety.",
 				},
 			],
 			image: "/global.png",

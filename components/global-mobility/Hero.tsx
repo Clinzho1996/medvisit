@@ -87,14 +87,17 @@ function Hero() {
 								<IconCaretRightFilled size={18} stroke={3} />
 							</motion.button>
 						</Link>
-						<motion.button
-							variants={buttonVariants}
-							whileHover="hover"
-							whileTap="tap"
-							className="hidden sm:flex items-center gap-2 bg-transparent border-2 border-[#05183A] text-sm text-[#05183A] px-6 py-3 rounded-lg font-bold hover:bg-[#05183A] hover:text-white transition-colors">
-							Book Free Consultation
-							<IconCaretRightFilled size={18} stroke={3} />
-						</motion.button>
+						<Link href="/second-opinion/contact-us">
+							{" "}
+							<motion.button
+								variants={buttonVariants}
+								whileHover="hover"
+								whileTap="tap"
+								className="hidden sm:flex items-center gap-2 bg-transparent border-2 border-[#05183A] text-sm text-[#05183A] px-6 py-3 rounded-lg font-bold hover:bg-[#05183A] hover:text-white transition-colors">
+								Book Free Consultation
+								<IconCaretRightFilled size={18} stroke={3} />
+							</motion.button>
+						</Link>
 					</motion.div>
 
 					<motion.hr
