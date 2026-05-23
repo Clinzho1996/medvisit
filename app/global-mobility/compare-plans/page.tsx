@@ -1,5 +1,6 @@
 import GlobalSection from "@/components/global-mobility/Breadcrumb";
 import ComparisonTable from "@/components/global-mobility/ComparionTable";
+import CpMobilityFooter from "@/components/global-mobility/CpFooter";
 
 function ComparePlans() {
 	return (
@@ -15,6 +16,7 @@ function ComparePlans() {
 				/>
 			</div>
 			<ComparisonTable />
+			<CpMobilityFooter />
 		</div>
 	);
 }

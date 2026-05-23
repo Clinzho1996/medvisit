@@ -1,4 +1,5 @@
 import BcFAQSection from "@/components/global-mobility/BcFaq";
+import BcMobilityFooter from "@/components/global-mobility/BcFooter";
 import BcWhy from "@/components/global-mobility/BcWhy";
 import GlobalSection from "@/components/global-mobility/Breadcrumb";
 import InfoPage from "@/components/global-mobility/Info";
@@ -25,6 +26,7 @@ function BirthCitizenship() {
 			<InfoPage />
 			<BcWhy />
 			<BcFAQSection />
+			<BcMobilityFooter />
 		</div>
 	);
 }

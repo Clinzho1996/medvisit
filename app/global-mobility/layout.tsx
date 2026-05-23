@@ -16,7 +16,7 @@ export default function GlobalMobilityLayout({
 		<>
 			<MobilityNavbar />
 			{children}
-			<MobilityFooter />
+			
 		</>
 	);
 }

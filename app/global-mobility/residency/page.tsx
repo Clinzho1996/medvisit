@@ -1,5 +1,6 @@
 import GlobalSection from "@/components/global-mobility/Breadcrumb";
 import ResFAQSection from "@/components/global-mobility/ResFaq";
+import ResMobilityFooter from "@/components/global-mobility/ResFooter";
 import ResInfoPage from "@/components/global-mobility/ResInfo";
 import CitizenshipPath from "@/components/global-mobility/ResPath";
 import ResWhy from "@/components/global-mobility/ResWhy";
@@ -23,6 +24,7 @@ Get permanent residency in 2 years and Chilean citizenship in 5 years."
 			<ResWhy />
 			<CitizenshipPath />
 			<ResFAQSection />
+			<ResMobilityFooter />
 		</div>
 	);
 }

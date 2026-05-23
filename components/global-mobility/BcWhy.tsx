@@ -1,24 +1,36 @@
 "use client";
 
-import {
-	IconBellRinging,
-	IconCaretRightFilled,
-	IconHeart,
-	IconUsers,
-} from "@tabler/icons-react";
+import { IconCaretRightFilled } from "@tabler/icons-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const BcWhy = () => {
 	const features = [
 		{
 			title: "Trusted Partnerships",
-			icon: <IconUsers className="text-[#F4911E] shrink-0" size={24} />,
+			icon: (
+				<Image
+					src="/shake.png"
+					alt="Chile"
+					width={20}
+					height={20}
+					className="object-contain"
+				/>
+			),
 			description:
 				"Authorized partner for Chile Kids — 8+ years experience, 200+ families assisted. We don't just resell services; we are your direct connection and boots on the ground in Chile.",
 		},
 		{
 			title: "End-to-End Concierge",
-			icon: <IconBellRinging className="text-[#F4911E] shrink-0" size={24} />,
+			icon: (
+				<Image
+					src="/chef.png"
+					alt="Chile"
+					width={20}
+					height={20}
+					className="object-contain"
+				/>
+			),
 			description:
 				"Transparent fee structures. No hidden charges. See exactly what you pay before you commit.",
 			isList: true,
@@ -33,7 +45,15 @@ const BcWhy = () => {
 		},
 		{
 			title: "Nigerian-Focused Support",
-			icon: <IconHeart className="text-[#F4911E] shrink-0" size={24} />,
+			icon: (
+				<Image
+					src="/hand.png"
+					alt="Chile"
+					width={20}
+					height={20}
+					className="object-contain"
+				/>
+			),
 			description:
 				"We understand Nigerian clients' needs. Our team speaks your language, understands your concerns, and provides guidance every step of the way.",
 		},
@@ -60,7 +80,7 @@ const BcWhy = () => {
 								whileInView={{ opacity: 1, y: 0 }}
 								viewport={{ once: true }}
 								transition={{ delay: index * 0.1 }}
-								className="flex gap-5">
+								className="flex gap-5 justify-start items-start">
 								{item.icon}
 								<div className="flex-1">
 									<h4 className="text-white font-bold text-xl mb-2">

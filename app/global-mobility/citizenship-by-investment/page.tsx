@@ -1,5 +1,6 @@
 import GlobalSection from "@/components/global-mobility/Breadcrumb";
 import CbiFAQSection from "@/components/global-mobility/CbiFaq";
+import CbiMobilityFooter from "@/components/global-mobility/CbiFooter";
 import CbiInfoPage from "@/components/global-mobility/CbiInfo";
 import CbiOverview from "@/components/global-mobility/CbiOverview";
 import CbiWhy from "@/components/global-mobility/CbiWhy";
@@ -23,6 +24,7 @@ function CBI() {
 			<CbiInfoPage />
 			<CbiWhy />
 			<CbiFAQSection />
+			<CbiMobilityFooter />
 		</div>
 	);
 }
