@@ -27,13 +27,15 @@ const BcMobilityFooter = () => {
 							estimate.
 						</p>
 
-						<motion.button
-							whileHover={{ scale: 1.05 }}
-							whileTap={{ scale: 0.95 }}
-							className="flex items-center gap-2 bg-[#F4911E] text-white px-6 py-3 rounded-lg font-bold shadow-[#F7931E70] shadow-lg transition-transform">
-							Book Free Consultation
-							<IconCaretRightFilled size={18} stroke={3} />
-						</motion.button>
+						<Link href="/medical-tourism/contact-us">
+							<motion.button
+								whileHover={{ scale: 1.05 }}
+								whileTap={{ scale: 0.95 }}
+								className="flex items-center gap-2 bg-[#F4911E] text-white px-6 py-3 rounded-lg font-bold shadow-[#F7931E70] shadow-lg transition-transform">
+								Book Free Consultation
+								<IconCaretRightFilled size={18} stroke={3} />
+							</motion.button>
+						</Link>
 					</div>
 				</motion.div>
 

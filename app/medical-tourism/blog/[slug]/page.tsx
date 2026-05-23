@@ -341,7 +341,7 @@ export default function ArticlePage({
 								recentPosts.map((recentPost) => (
 									<Link
 										key={recentPost.id}
-										href={`/blog/${recentPost.slug}`}
+										href={`/medical-tourism/blog/${recentPost.slug}`}
 										className="group cursor-pointer block bg-white border border-gray-100 shadow-sm rounded-xl p-4 transition-all hover:shadow-md">
 										{recentPost.image && (
 											<div className="aspect-video rounded-lg mb-3 overflow-hidden relative bg-gray-100">
