@@ -16,6 +16,7 @@ function BirthCitizenship() {
 					subtitle="Legally Confirmed 2026 — Chile's jus soli law grants automatic citizenship to children born to tourists. Fully legal, government-recognized, and used by hundreds of international families."
 					buttonText="Get Your Free Estimate"
 					bgColor="bg-[#E2E4F5]"
+					link="/second-opinion/contact-us"
 					img="/right.png"
 					isCentered={true}
 				/>

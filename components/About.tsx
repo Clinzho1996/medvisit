@@ -69,7 +69,7 @@ const AboutSection = () => {
 			</div>
 
 			{/* --- Main Content Section --- */}
-			<div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row gap-12 items-center mb-24">
+			<div className=" mx-auto px-[9%] flex flex-col sm:flex-row gap-12 items-center mb-24">
 				<motion.div
 					initial={{ opacity: 0, x: -30 }}
 					whileInView={{ opacity: 1, x: 0 }}
@@ -118,7 +118,7 @@ const AboutSection = () => {
 			<hr className="h-[1.33px] w-full border-none bg-gradient-to-r from-transparent via-[#F4911E] to-transparent opacity-40" />
 
 			{/* --- Statistics Section --- */}
-			<div className="max-w-7xl mx-auto px-6 pt-10">
+			<div className="mx-auto px-[9%] pt-10">
 				<div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
 					{stats.map((stat, idx) => (
 						<div key={idx} className="relative group text-center lg:text-left">

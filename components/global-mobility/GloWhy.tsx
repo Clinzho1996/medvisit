@@ -9,6 +9,7 @@ import {
 	IconUsers,
 } from "@tabler/icons-react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const GloWhy = () => {
 	const features = [
@@ -75,13 +76,15 @@ const GloWhy = () => {
 					</div>
 
 					<div className="flex">
-						<motion.button
-							whileHover={{ scale: 1.05 }}
-							whileTap={{ scale: 0.95 }}
-							className="flex items-center gap-2 bg-[#F4911E] text-white px-8 py-4 rounded-xl text-md font-semibold shadow-[#F4911E30] shadow-2xl hover:bg-[#e08113] transition-all">
-							Book Free Consultation
-							<IconCaretRightFilled size={18} />
-						</motion.button>
+						<Link href="/second-opinion/contact-us">
+							<motion.button
+								whileHover={{ scale: 1.05 }}
+								whileTap={{ scale: 0.95 }}
+								className="flex items-center gap-2 bg-[#F4911E] text-white px-6 py-3 rounded-lg text-xs font-bold shadow-[#F7931E70] shadow-lg transition-transform">
+								Book Free Consultation
+								<IconCaretRightFilled size={18} stroke={3} />
+							</motion.button>
+						</Link>
 					</div>
 				</motion.div>
 			</div>

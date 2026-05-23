@@ -2,6 +2,7 @@
 
 import { IconCaretRightFilled, IconCircleCheck } from "@tabler/icons-react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const WhyChooseMedvisit = () => {
 	const features = [
@@ -78,19 +79,23 @@ const WhyChooseMedvisit = () => {
 					</div>
 
 					<div className="flex flex-wrap gap-4">
-						<motion.button
-							whileHover={{ scale: 1.05 }}
-							whileTap={{ scale: 0.95 }}
-							className="flex items-center gap-2 bg-[#F4911E] text-white px-6 py-3 rounded-lg text-xs font-bold shadow-[#F7931E70] shadow-lg transition-transform">
-							Book Free Consultation
-							<IconCaretRightFilled size={18} stroke={3} />
-						</motion.button>
-						<motion.button
-							whileHover={{ scale: 1.05 }}
-							whileTap={{ scale: 0.95 }}
-							className="px-6 py-3 border border-[#F9F9F9] text-[#F9F9F9] text-xs font-bold rounded-lg hover:bg-white/5 transition-colors">
-							Talk to an Expert
-						</motion.button>
+						<Link href="/second-opinion/contact-us">
+							<motion.button
+								whileHover={{ scale: 1.05 }}
+								whileTap={{ scale: 0.95 }}
+								className="flex items-center gap-2 bg-[#F4911E] text-white px-6 py-3 rounded-lg text-xs font-bold shadow-[#F7931E70] shadow-lg transition-transform">
+								Book Free Consultation
+								<IconCaretRightFilled size={18} stroke={3} />
+							</motion.button>
+						</Link>
+						<Link href="/second-opinion/contact-us">
+							<motion.button
+								whileHover={{ scale: 1.05 }}
+								whileTap={{ scale: 0.95 }}
+								className="px-7 py-3.5 border border-white/30 text-white text-xs font-bold rounded-lg hover:bg-white/10 transition-colors">
+								Talk to an Expert
+							</motion.button>
+						</Link>
 					</div>
 				</motion.div>
 			</div>

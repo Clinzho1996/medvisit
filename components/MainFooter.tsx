@@ -14,7 +14,7 @@ const MedVisitFooter = () => {
 
 	return (
 		<footer className="bg-[#05213A] text-white font-sans selection:bg-[#F4911E]/30">
-			<div className="max-w-7xl mx-auto px-6 py-12 lg:py-20">
+			<div className="mx-auto px-[9%] py-12 lg:py-20">
 				{/* --- Hero Call to Action Card --- */}
 				<motion.div
 					initial={{ opacity: 0, y: 20 }}

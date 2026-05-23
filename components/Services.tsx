@@ -173,7 +173,7 @@ const ServicesSection = () => {
 
 	return (
 		<section className="bg-white py-20 overflow-hidden">
-			<div className="max-w-7xl mx-auto px-6">
+			<div className="mx-auto px-[9%]">
 				{services.map((service, index) => (
 					<ServiceBlock key={index} {...service} />
 				))}

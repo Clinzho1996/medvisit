@@ -9,6 +9,7 @@ import {
 	IconUsers,
 } from "@tabler/icons-react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const CbiWhy = () => {
 	const features = [
@@ -76,19 +77,23 @@ const CbiWhy = () => {
 					</div>
 
 					<div className="flex flex-wrap gap-4">
-						<motion.button
-							whileHover={{ scale: 1.05 }}
-							whileTap={{ scale: 0.95 }}
-							className="flex items-center gap-2 bg-[#F4911E] text-white px-7 py-3.5 rounded-lg text-xs font-bold shadow-[#F7931E40] shadow-xl transition-all">
-							Book Free Consultation
-							<IconCaretRightFilled size={16} />
-						</motion.button>
-						<motion.button
-							whileHover={{ scale: 1.05 }}
-							whileTap={{ scale: 0.95 }}
-							className="px-7 py-3.5 border border-white/30 text-white text-xs font-bold rounded-lg hover:bg-white/10 transition-colors">
-							Talk to an Expert
-						</motion.button>
+						<Link href="/second-opinion/contact-us">
+							<motion.button
+								whileHover={{ scale: 1.05 }}
+								whileTap={{ scale: 0.95 }}
+								className="flex items-center gap-2 bg-[#F4911E] text-white px-6 py-3 rounded-lg text-xs font-bold shadow-[#F7931E70] shadow-lg transition-transform">
+								Book Free Consultation
+								<IconCaretRightFilled size={18} stroke={3} />
+							</motion.button>
+						</Link>
+						<Link href="/second-opinion/contact-us">
+							<motion.button
+								whileHover={{ scale: 1.05 }}
+								whileTap={{ scale: 0.95 }}
+								className="px-7 py-3.5 border border-white/30 text-white text-xs font-bold rounded-lg hover:bg-white/10 transition-colors">
+								Talk to an Expert
+							</motion.button>
+						</Link>
 					</div>
 				</motion.div>
 			</div>

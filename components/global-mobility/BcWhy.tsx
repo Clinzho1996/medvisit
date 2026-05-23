@@ -3,8 +3,10 @@
 import { IconCaretRightFilled } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 const BcWhy = () => {
+	const MotionLink = motion(Link);
 	const features = [
 		{
 			title: "Trusted Partnerships",
@@ -106,19 +108,22 @@ const BcWhy = () => {
 					</div>
 
 					<div className="flex flex-wrap gap-4">
-						<motion.button
+						<MotionLink
+							href="/second-opinion/contact-us"
 							whileHover={{ scale: 1.05 }}
 							whileTap={{ scale: 0.95 }}
 							className="flex items-center gap-2 bg-[#F4911E] text-white px-7 py-3.5 rounded-lg text-xs font-bold shadow-[#F7931E40] shadow-xl transition-all">
 							Book Free Consultation
 							<IconCaretRightFilled size={16} />
-						</motion.button>
-						<motion.button
+						</MotionLink>
+
+						<MotionLink
+							href="/second-opinion/contact-us"
 							whileHover={{ scale: 1.05 }}
 							whileTap={{ scale: 0.95 }}
 							className="px-7 py-3.5 border border-white/30 text-white text-xs font-bold rounded-lg hover:bg-white/10 transition-colors">
 							Talk to an Expert
-						</motion.button>
+						</MotionLink>
 					</div>
 				</motion.div>
 			</div>

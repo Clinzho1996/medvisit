@@ -71,14 +71,14 @@ export default function MedicalVisitFooter() {
 						Latest Blog
 					</h3>
 					<ul className="space-y-4 text-lg text-[#000000B2]">
-						<li className="hover:text-white cursor-pointer transition-colors">
+						<li className="hover:text-[#F4911E] cursor-pointer transition-colors">
 							COVID-19 Guidelines for International Patients Arriving in India
 							For Medical Treatment
 						</li>
-						<li className="hover:text-white cursor-pointer transition-colors">
+						<li className="hover:text-[#F4911E] cursor-pointer transition-colors">
 							Travelling to India for Eye Surgery (2020 Update)
 						</li>
-						<li className="hover:text-white cursor-pointer transition-colors">
+						<li className="hover:text-[#F4911E] cursor-pointer transition-colors">
 							How much Does a Standard Medical Checkup Cost in Checkup Cost in
 							India, Dubai, and Israel
 						</li>
