@@ -176,7 +176,6 @@ export default function BlogGridSection() {
 									{/* Main Content Body */}
 									<div className="p-6 space-y-3">
 										<div className="flex items-center space-x-1.5 text-[10px] sm:text-sm tracking-wider font-normal">
-											<span className="text-[#00000080]">BY</span>
 											<span className="text-[#F7931E]">
 												{post?.category?.name.toUpperCase()}
 											</span>
@@ -190,9 +189,15 @@ export default function BlogGridSection() {
 											{post?.title}
 										</h3>
 
-										<p className="text-[#00000080] font-normal tracking-tighter text-xs sm:text-base leading-relaxed line-clamp-3 pt-1">
-											{truncateText(post?.meta.desc || post.content, 120)}
-										</p>
+										<p
+											className="text-[#00000080] font-normal tracking-tighter text-xs sm:text-base leading-relaxed line-clamp-3 pt-1"
+											dangerouslySetInnerHTML={{
+												__html: truncateText(
+													post?.meta?.desc || post?.content || "",
+													120,
+												),
+											}}
+										/>
 									</div>
 								</div>
 							</Link>
