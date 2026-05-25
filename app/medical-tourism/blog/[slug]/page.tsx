@@ -198,7 +198,7 @@ export default function ArticlePage({
 	return (
 		<div className="min-h-screen bg-white">
 			{/* Hero Section */}
-			<section className="relative bread-bg from-[#05213A] to-[#0a3558] w-full pt-36 pb-16 px-6 overflow-hidden">
+			<section className="relative bread-bg from-[#05213A] to-[#0a3558] w-full pt-16 sm:pt-26 pb-16 px-6 overflow-hidden">
 				<div className="max-w-7xl md:max-w-6xl lg:max-w-6xl sm:max-w-6xl mx-auto relative z-10 text-center">
 					<nav className="text-[10px] uppercase tracking-widest text-gray-300 mb-6 flex gap-2 justify-center">
 						<Link href="/" className="hover:text-white transition-colors">
@@ -216,7 +216,7 @@ export default function ArticlePage({
 						</span>
 					</nav>
 
-					<h1 className="text-4xl md:text-5xl capitalize lg:text-6xl font-bold text-white leading-tight mb-8">
+					<h1 className="text-4xl md:text-5xl max-w-5xl mx-auto capitalize lg:text-6xl font-bold text-white leading-tight mb-8">
 						{post.title}
 					</h1>
 
