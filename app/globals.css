@@ -158,6 +158,7 @@
 		background-image: url("/bread.png");
 		background-size: cover;
 		background-position: bottom;
+		background-repeat: no-repeat;
 	}
 
 	.bread2-bg {
