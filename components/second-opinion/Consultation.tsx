@@ -116,7 +116,7 @@ export default function ConsultationPage() {
 
 			if (response.ok) {
 				toast.success("Consultation booked successfully!", {
-					description: `Total cost: $${fees.total}. You will be redirected to payment.`,
+					description: `Total cost: $${fees.total}. We will contact you shortly.`,
 					duration: 5000,
 				});
 				// Reset form after successful submission
