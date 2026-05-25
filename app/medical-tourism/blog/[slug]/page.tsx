@@ -205,7 +205,9 @@ export default function ArticlePage({
 							Home
 						</Link>
 						<span>/</span>
-						<Link href="/blog" className="hover:text-white transition-colors">
+						<Link
+							href="/medical-tourism/blog"
+							className="hover:text-white transition-colors">
 							Blog
 						</Link>
 						<span>/</span>
@@ -300,7 +302,7 @@ export default function ArticlePage({
 					<div className="mt-16 pt-8 border-t border-gray-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
 						<div className="flex items-center gap-4">
 							<div className="w-12 h-12 capitalize rounded-full bg-gradient-to-r from-[#F7931E] to-[#FBB03B] flex items-center justify-center text-white font-bold text-lg">
-								{post.category?.name?.charAt(0) || "M"}
+								M
 							</div>
 							<div>
 								<p className="text-xs text-gray-500">
@@ -309,9 +311,9 @@ export default function ArticlePage({
 								<p className="text-sm font-bold text-[#05213A]">
 									MedVisit Team
 								</p>
-								<p className="text-xs font-normal text-gray-500">
+								{/* <p className="text-xs font-normal text-gray-500">
 									Medical Tourism Experts
-								</p>
+								</p> */}
 							</div>
 						</div>
 						<div className="flex gap-3">
